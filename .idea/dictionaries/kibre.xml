@@ -2,6 +2,7 @@
   <dictionary name="kibre">
     <words>
       <w>crypto</w>
+      <w>facetflow</w>
       <w>mongoosastic</w>
       <w>signin</w>
       <w>virtuals</w>

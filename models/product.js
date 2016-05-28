@@ -16,7 +16,8 @@ var ProductSchema = new Schema({
 
 ProductSchema.plugin(mongoosastic, {
     hosts: [
-        "localhost:9200"
+        "localhost:9200",
+        'https://bEKlklRJkOiBxk588NYAmP3Q1eSFiEel:@jani.east-us.azr.facetflow.io'
     ]
 });
 
