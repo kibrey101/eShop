@@ -4,20 +4,64 @@
     <h3>Search not found</h3>
 <% } else { %>
     <h3>Results for <%= query %></h3>
-    <div class="container">
-        <div class="row">
+    <div class="container" style="margin-bottom: 60px;">
+        <!--<div class="row">-->
+            <!--<% for(var result in results) { %>-->
+            <!--<div class="thumbnail">-->
+                <!--<a href="/product/<%= results[result]._id %>" >-->
+                        <!--<img src="<%= results[result]._source.image %>" class="img-thumbnail" style="width: 100px;height: 100px;">-->
+                        <!--<div class="caption">-->
+                            <!--<h3><%= results[result]._source.name %></h3>-->
+                            <!--<p><%= results[result]._source.category.name %></p>-->
+                            <!--<p><%= results[result]._source.price %></p>-->
+                        <!--</div>-->
+                <!--</a>-->
+            <!--</div>-->
+            <!--<% } %>-->
+        <!--</div>-->
+
+        <div class="row" style="height: 300px!important;">
             <% for(var result in results) { %>
-            <div class="thumbnail">
-                <a href="/product/<%= results[result]._id %>" >
-                        <img src="<%= results[result]._source.image %>" class="img-thumbnail" style="width: 100px;height: 100px;">
-                        <div class="caption">
-                            <h3><%= results[result]._source.name %></h3>
-                            <p><%= results[result]._source.category.name %></p>
-                            <p><%= results[result]._source.price %></p>
-                        </div>
+            <div class="col-xs-4 col-sm-4 col-md-4" style="padding: 10px; margin: 10px 0;">
+                <a href="/product/<%= results[result]._id %>" style=" background-color: #eee;">
+                    <div class="thumbnail">
+                        <img src="<%= results[result]._source.image %>" alt="">
+                    </div>
+                    <h4><%= results[result]._source.name %></h4>
                 </a>
+                <div class="caption">
+                    <h5><%= results[result]._source.category.name %></h5>
+                    <h5><%= results[result]._source.price %></h5>
+                </div>
+                <div>
+                    <form action="/addToCart" method="post">
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <input type="text" class="form-control" name="quantity" id="quantity" placeholder="Qty..." required>
+                                <!--<div class="btn-group" role="group" aria-label="..." >
+                                    <input type="hidden" name="quantity" id="quantity" value="1">
+                                    <button type="button" id="minus" class="btn btn-default">-</button>
+                                    <button type="button" id="total" class="btn btn-default">1</button>
+                                    <button type="button" id="plus" class="plus btn btn-default">+</button>
+                                </div>-->
+                            </div>
+                            <div class="col-xs-5 col-md-4">
+                                <input type="hidden" name="product_id" id="product_id" value="<%= results[result]._id %>">
+                                <input type="hidden" name="priceHidden" id="priceHidden" value="<%= results[result]._source.price %>">
+
+                                <% if(user){ %>
+                                <button type="submit" class="btn btn-primary pull-right" style="margin-right: 1px;">Add to cart</button>
+                                <% } else { %>
+                                <a href="/login" class="btn btn-warning">Signin to make order</a>
+                                <% } %>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
             </div>
             <% } %>
+
         </div>
     </div>
 <% } %>
