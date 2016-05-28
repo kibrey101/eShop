@@ -1,0 +1,58 @@
+<nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: #025fc0;">
+    <div class="container" >
+        <div class="row" >
+            <% if(user) { %>
+                <form action="/search" method="post" class="col-sm-6 col-sm-offset-3 col-md-offset-3">
+
+                    <div style="padding: 15px 0;">
+                        <div class="input-group col-md-12">
+                            <input type="text" name="q" class="form-control" placeholder="Search...">
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-inverse">
+                                    <i class="glyphicon glyphicon-search"></i></button>
+                            </span>
+                        </div>
+                    </div>
+                </form>
+            <% } %>
+        </div>
+        <div class="nav navbar-nav navbar-left">
+            <div class="navbar-header">
+                <h3><a href="/" style="color: #fff;text-decoration: none;">E-Catalog</a></h3>
+            </div>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <% if(!user) { %>
+          <li>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:#fff;">Login / Signup</a>
+              <ul class="dropdown-menu">
+                  <li><a href="/signup" >Signup</a></li>
+                  <li><a href="/login" >Login</a></li>
+              </ul>
+          </li>
+            <% } else { %>
+            <% for(category in categories) { %>
+            <li>
+                <a href="/products/<%= categories[category]._id %>" style="color:#fff;">
+                    <%= categories[category].name %></a>
+            </li>
+            <% } %>
+
+            <li >
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" style=" color: #fff!important;"><%= user.fullName %></a>
+                <ul class="dropdown-menu">
+                    <li><a href="/profile">Profile</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="/cart" class="btn btn-default" style="background-color: #eee;
+                border-radius: 2px;margin-top:10px;border:none;padding:6px;">
+                    <i class="glyphicon glyphicon-shopping-cart" style="color:#333;"></i>
+                    <span class="badge"><%= cart %></span>
+                </a>
+            </li>
+            <% } %>
+        </ul>
+    </div>
+</nav>

@@ -1,0 +1,88 @@
+<% layout("layout") %>
+
+<div class="container">
+    <div class="jumbotron">
+        <div class="row">
+            <h1 class="text-center">Shop smart, save big</h1>
+            <!--<p class="text-center">Find you favorite product</p>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="input-group col-md-12">
+                        <input id="search" type="text" class="form-control" name="search_term" placeholder="search for a product...">
+                        <span class="input-group-btn">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="glyphicon glyphicon-search"></i></button>
+                        </span>
+                    </div>
+                </div>
+            </div>-->
+        </div>
+    </div>
+</div>
+<div class="container">
+    <% if (message.length > 0) { %>
+    <div class="alert alert-success alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert" aria-label="close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <%= message %>
+    </div>
+    <% } %>
+    <div class="row" style="height: 300px!important;">
+        <% for(var product in products) { %>
+        <div class="col-xs-4 col-sm-4 col-md-4" style="padding: 10px; margin: 10px 0;">
+            <a href="/product/<%= products[product]._id %>" style=" background-color: #eee;">
+                <div class="thumbnail">
+                    <img src="<%= products[product].image %>" alt="">
+                </div>
+                <h4><%= products[product].name %></h4>
+            </a>
+            <div class="caption">
+                <h5><%= products[product].category.name %></h5>
+                <h5><%= products[product].price %></h5>
+            </div>
+            <div>
+                <form action="/addToCart" method="post">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <input type="text" class="form-control" name="quantity" id="quantity" placeholder="Qty..." required>
+                            <!--<div class="btn-group" role="group" aria-label="..." >
+                                <input type="hidden" name="quantity" id="quantity" value="1">
+                                <button type="button" id="minus" class="btn btn-default">-</button>
+                                <button type="button" id="total" class="btn btn-default">1</button>
+                                <button type="button" id="plus" class="plus btn btn-default">+</button>
+                            </div>-->
+                        </div>
+                        <div class="col-xs-5 col-md-4">
+                            <input type="hidden" name="product_id" id="product_id" value="<%= products[product]._id %>">
+                            <input type="hidden" name="priceHidden" id="priceHidden" value="<%= products[product].price %>">
+
+                            <% if(user){ %>
+                                <button type="submit" class="btn btn-primary pull-right" style="margin-right: 1px;">Add to cart</button>
+                            <% } else { %>
+                                <a href="/login" class="btn btn-warning">Signin to make order</a>
+                            <% } %>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+        <% } %>
+
+    </div>
+    <div class="row">
+        <ul class="pagination" text="center">
+            <li>
+                <% for(i=1; i<=pages; i++) { %>
+                <% if(i===1 ) { %>
+            <li><a href="/"><%= i %></a></li>
+            <% } else { %>
+            <li><a href="/page/<%= i %>"><%= i %></a></li>
+            <% } %>
+            <% } %>
+            </li>
+        </ul>
+
+    </div>
+</div>
