@@ -92,7 +92,8 @@ exports.addToCart = function (req, res, next) {
                     cart.save(function (err) {
                         if(err) return next(err);
                         req.flash("cartMessage", "Item/s added to cart");
-                        return res.redirect("/");
+                        var backURL=req.header('Referer') || '/';
+                        return res.redirect(backURL);
                     });
 
 
@@ -113,7 +114,9 @@ exports.addToCart = function (req, res, next) {
             cart.save(function (err) {
                 if(err) return next(err);
                 req.flash("cartMessage", "Item/s added to cart");
-                return res.redirect("/");
+                var backURL=req.header('Referer') || '/';
+                return res.redirect(backURL);
+
             });
         }
 

@@ -25,7 +25,7 @@ $(function () {
         });
     });
 
-    $(document).on("click", ".plus", function (e) {
+    $(document).on("click", "#plus", function (e) {
 
         alert("Hello! I am an alert box!!");
     });

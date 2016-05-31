@@ -44,21 +44,19 @@
             <div>
                 <form action="/addToCart" method="post">
                     <div class="row">
-                        <div class="col-xs-4">
-                            <input type="text" class="form-control" name="quantity" id="quantity" placeholder="Qty..." required>
+                        <div class="col-md-6 col-sm-offset-3">
+                            <input type="hidden" class="form-control" name="quantity" value="1">
                             <!--<div class="btn-group" role="group" aria-label="..." >
                                 <input type="hidden" name="quantity" id="quantity" value="1">
                                 <button type="button" id="minus" class="btn btn-default">-</button>
                                 <button type="button" id="total" class="btn btn-default">1</button>
                                 <button type="button" id="plus" class="plus btn btn-default">+</button>
                             </div>-->
-                        </div>
-                        <div class="col-xs-5 col-md-4">
                             <input type="hidden" name="product_id" id="product_id" value="<%= products[product]._id %>">
                             <input type="hidden" name="priceHidden" id="priceHidden" value="<%= products[product].price %>">
 
                             <% if(user){ %>
-                                <button type="submit" class="btn btn-primary pull-right" style="margin-right: 1px;">Add to cart</button>
+                                <button type="submit" class="btn btn-primary btn-sm" style="margin-right: 1px;">Add to cart</button>
                             <% } else { %>
                                 <a href="/login" class="btn btn-warning">Signin to make order</a>
                             <% } %>
