@@ -8,6 +8,10 @@ router.route("/page/:page").get(main.renderHome);
 router.route("/about").get(main.renderAbout);
 router.route("/products/:id").get(main.renderCategoryProducts);
 router.route("/products/:id/:manufacturer").get(main.renderCategoryProducts);
+
+router.route("/products/:id/page/:categoryPage").get(main.renderCategoryProducts);
+router.route("/products/:id/:manufacturer/page/:categoryPage").get(main.renderCategoryProducts);
+
 router.route("/product/:id").get(main.renderProduct);
 router.route("/search").get(main.renderSearch).post(main.search);
 router.route("/addToCart").post(main.addToCart);

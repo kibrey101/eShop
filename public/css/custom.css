@@ -51,3 +51,10 @@
     font-weight:bold;
     font-size:1.4em;
 }
+
+.manuTab{
+    border: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important; background-color: #EBEFF0;
+}

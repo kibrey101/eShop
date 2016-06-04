@@ -37,15 +37,24 @@ exports.renderAbout = function (req, res, next) {
 exports.renderCategoryProducts = function (req, res, next) {
     var queryObject = {category: req.params.id};
     if(req.params.manufacturer) queryObject.manufacturer = req.params.manufacturer;
+
+    var itemsPerPage = 12;
+    var page = req.params.categoryPage || 1;
+    
    Product
        .find(queryObject)
+       .skip(itemsPerPage * (page -1 ))
+       .limit(itemsPerPage)
        .populate("category")
        .exec( function (err, products) {
         if(err) return next(err);
 
            var keys = {};
            var results = [];
-
+           var agManufacturer = [];
+           var hnManufacturer = [];
+           var ouManufacturer = [];
+           var vzManufacturer = [];
            Product.find({category: req.params.id})
                .populate("category")
                .exec(function (err, manufacturerResults) {
@@ -55,10 +64,34 @@ exports.renderCategoryProducts = function (req, res, next) {
                        var val = manufacturerResults[i].manufacturer;
                        if(typeof keys[val] == "undefined"){
                            keys[val] = true;
-                           results.push(val);
+
+                           if(val.toUpperCase().charAt(0) <= 'G'){
+                               agManufacturer.push(val);
+                           } else if (val.toUpperCase().charAt(0) > 'G' && val.toUpperCase().charAt(0) <= 'N'){
+                               hnManufacturer.push(val);
+                           } else if (val.toUpperCase().charAt(0) > 'N' && val.toUpperCase().charAt(0) <= 'U'){
+                               ouManufacturer.push(val);
+                           } else {
+                               vzManufacturer.push(val);
+                           }
                        }
                    }
-                   res.render("main/category", {products: products, manufacturers: results, currentCategory: req.params.id});
+
+                   Product.count(queryObject).exec(function (err, count) {
+                       if(err) return next(err);
+
+                       var checkManufacturer = "/";
+                       if(req.params.manufacturer) checkManufacturer = checkManufacturer + req.params.manufacturer + "/";
+                       res.render("main/category", {
+                           products: products,
+                           pages: Math.ceil(count/itemsPerPage),
+                           manufacturerAG: agManufacturer,
+                           manufacturerHN: hnManufacturer,
+                           manufacturerOU: ouManufacturer,
+                           manufacturerVZ: vzManufacturer,
+                           currentManufacturer: checkManufacturer,
+                           currentCategory: req.params.id});
+                   });
                });
     });
 };
