@@ -19,7 +19,7 @@
                             <ul class="nav">
                                 <% for(var i = 0; i <  manufacturers.length; i++ ) { %>
                                 <li class="">
-                                    <a href="#" class="btn btn success btn-lg pull-left" style="width: 100%;text-align: left;"><%= manufacturers[i] %></a>
+                                    <a href="/products/<%= currentCategory %>/<%= manufacturers[i] %>" class="btn btn success btn-lg pull-left" style="width: 100%;text-align: left;"><%= manufacturers[i] %></a>
                                 </li>
                                 <% } %>
                             </div>

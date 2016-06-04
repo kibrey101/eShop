@@ -35,22 +35,31 @@ exports.renderAbout = function (req, res, next) {
 };
 
 exports.renderCategoryProducts = function (req, res, next) {
+    var queryObject = {category: req.params.id};
+    if(req.params.manufacturer) queryObject.manufacturer = req.params.manufacturer;
    Product
-       .find({category: req.params.id})
+       .find(queryObject)
        .populate("category")
        .exec( function (err, products) {
         if(err) return next(err);
 
-        var keys = {};
-        var results = [];
-        for(var i = 0; i< products.length; i++) {
-            var val = products[i].manufacturer;
-            if(typeof keys[val] == "undefined"){
-                keys[val] = true;
-                results.push(val);
-            }
-        }
-        res.render("main/category", {products: products, manufacturers: results});
+           var keys = {};
+           var results = [];
+
+           Product.find({category: req.params.id})
+               .populate("category")
+               .exec(function (err, manufacturerResults) {
+                   if(err) return next(err);
+
+                   for(var i = 0; i< manufacturerResults.length; i++) {
+                       var val = manufacturerResults[i].manufacturer;
+                       if(typeof keys[val] == "undefined"){
+                           keys[val] = true;
+                           results.push(val);
+                       }
+                   }
+                   res.render("main/category", {products: products, manufacturers: results, currentCategory: req.params.id});
+               });
     });
 };
 
