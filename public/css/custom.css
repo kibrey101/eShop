@@ -1,3 +1,53 @@
-body{
-    padding-top: 150px;
+.navbar{
+    background-color: #ffffff;
+}
+.brandRow{
+    padding: 30px 20px; border-bottom: 1px solid #eee;
+}
+.navbarLogin{
+    color:#000!important;font-weight: bold; text-decoration: none!important; padding: 10px 15px;
+}
+.navbarCart a:hover {
+    background-color: #fff!important;
+}
+.navbarCart{}
+.badge{
+    height: 25px; border-radius: 12.5px;
+    width:25px; margin:0 0 30px -10px;
+    color:#000!important;
+    background-color: #fff!important;
+    border: 1px solid #888;
+    padding: 5px;}
+
+.navbarCart a {border: none;}
+.navbarProfile a {color:#000!important;font-weight: bold; text-decoration: none!important;}
+.navbarSearch input{ padding: 20px; outline: none;
+    border: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important; background-color: #EBEFF0;}
+.navbarSearch input:active{ border: none!important; }
+
+.productbox {
+    background-color:#ffffff;
+    padding:10px;
+    margin-bottom:10px;
+    -webkit-box-shadow: 0 8px 6px -6px  #999;
+    -moz-box-shadow: 0 8px 6px -6px  #999;
+    box-shadow: 0 8px 6px -6px #999;
+}
+
+.producttitle {
+    font-weight:bold;
+    padding:5px 0 5px 0;
+}
+
+.productprice {
+    border-top:1px solid #dadada;
+    padding-top:5px;
+}
+
+.pricetext {
+    font-weight:bold;
+    font-size:1.4em;
 }

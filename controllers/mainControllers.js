@@ -1,5 +1,6 @@
 var Product = require("../models/product");
 var Cart = require("../models/cart");
+var stripe = require("stripe")("sk_test_Oka1n8mYSm8qMfURCPsDh1od");
 
 function paginate(req, res, next) {
     var itemsPerPage = 12;
@@ -39,7 +40,17 @@ exports.renderCategoryProducts = function (req, res, next) {
        .populate("category")
        .exec( function (err, products) {
         if(err) return next(err);
-        res.render("main/category", {products: products});
+
+        var keys = {};
+        var results = [];
+        for(var i = 0; i< products.length; i++) {
+            var val = products[i].manufacturer;
+            if(typeof keys[val] == "undefined"){
+                keys[val] = true;
+                results.push(val);
+            }
+        }
+        res.render("main/category", {products: products, manufacturers: results});
     });
 };
 
@@ -62,7 +73,7 @@ exports.search = function (req, res, next) {
 exports.renderSearch = function (req, res, next) {
    if(req.query.q) {
        Product.search({
-           query_string: {query: req.query.q}
+           query_string: {query: req.query.q }
        }, function (err, results) {
            if(err) return next(err);
            var data = results.hits.hits.map(function (hit) {
@@ -87,7 +98,7 @@ exports.addToCart = function (req, res, next) {
                 if(cart.items[i].item == req.body.product_id){
                     cart.items[i].quantity += parseInt(req.body.quantity);
                     cart.items[i].price += parseFloat(req.body.priceHidden * req.body.quantity);
-                    cart.total += parseFloat(req.body.priceHidden).toFixed(2);
+                    //cart.total += parseFloat(req.body.priceHidden).toFixed(2);
                     itemExists = true;
                     cart.save(function (err) {
                         if(err) return next(err);
@@ -109,7 +120,7 @@ exports.addToCart = function (req, res, next) {
                 price: parseFloat(req.body.priceHidden * req.body.quantity)
             });
 
-            cart.total += parseFloat(req.body.priceHidden).toFixed(2);
+            //cart.total += parseFloat(req.body.priceHidden).toFixed(2);
             itemExists = false;
             cart.save(function (err) {
                 if(err) return next(err);
@@ -125,6 +136,45 @@ exports.addToCart = function (req, res, next) {
     });
 };
 
+exports.renderCart = function (req, res, next) {
+    Cart.findOne({owner: req.user._id})
+        .populate("items.item")
+        .exec(function (err, userCart) {
+            if(err) return next(err);
+            res.render("main/cart", {foundCart: userCart, removeMessage: req.flash("remove")});
+        });
+};
+
+
+exports.remove = function (req, res, next) {
+    Cart.findOne({owner: req.user._id}, function (err, foundCart) {
+        if(err) return next(err);
+        foundCart.items.pull(String(req.body.item));
+        foundCart.total = 0 ;
+        foundCart.save(function (err) {
+            if(err) return next(err);
+
+            req.flash("remove", "item/s removed from cart");
+            return res.redirect("/cart");
+        });
+
+    });
+};
+
+exports.payment = function (req, res, next) {
+   var stripeToken = req.body.stripeToken;
+    var currentCharges = Math.round(req.body.stripeMoney * 100);
+    stripe.customers.create({
+        source: stripeToken
+    }).then(function (customer) {
+        return stripe.charges.create({
+            amount: currentCharges,
+            currency: "eur",
+            customer: customer.id
+        });
+    });
+    res.redirect("/");
+};
 Product.createMapping(function (err, mapping) {
     if(err){
         console.log("error while creating mapping");

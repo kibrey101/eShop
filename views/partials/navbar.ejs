@@ -1,4 +1,4 @@
-<nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: #025fc0;">
+<!--<nav class="navbar navbar-inverse" style="background-color: #025fc0;">
     <div class="container" >
         <div class="row" >
             <% if(user) { %>
@@ -18,7 +18,7 @@
         </div>
         <div class="nav navbar-nav navbar-left">
             <div class="navbar-header">
-                <h3><a href="/" style="color: #fff;text-decoration: none;">E-Catalog</a></h3>
+                <h4><a href="/" style="color: #fff;text-decoration: none;">E-Catalog</a></h4>
             </div>
         </div>
         <ul class="nav navbar-nav navbar-right">
@@ -54,5 +54,81 @@
             </li>
             <% } %>
         </ul>
+    </div>
+</nav>-->
+
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="row brandRow">
+            <div class="col-xs-4">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/" style="color: #000; font-size: 2em;">E-CATALOG</a>
+                </div>
+            </div>
+            <% if(user) { %>
+            <div class="col-xs-4">
+                <form action="/search" method="post" class="navbar-form">
+                    <div>
+                        <div class="input-group col-md-12 navbarSearch">
+                            <input type="text" name="q" class="form-control" placeholder="Search...">
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-inverse" style="height: 40px;background-color: #EBEFF0;">
+                                    <i class="glyphicon glyphicon-search" ></i></button>
+                            </span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-xs-3 navbarProfile">
+                <a href="#" class="dropdown-toggle navbar-text pull-right" data-toggle="dropdown"><%= user.fullName %></a>
+                <ul class="dropdown-menu pull-right">
+                    <li><a href="/profile">Profile</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                </ul>
+            </div>
+            <div class="navbar-right navbarCart" style="width: 30px;">
+                <a href="/cart" class="btn btn-default pull-right">
+                    <img src="/img/shopping_cart-50.png"  width="40">
+                    <span class="badge text-center"><%= cart %></span>
+                </a>
+            </div>
+            <% }  else { %>
+                <div class="col-xs-1 navbar-right">
+                    <a href="/login" class="navbar-text navbarLogin">Login</a>
+                   <!-- <ul class="dropdown-menu">
+                        <li><a href="/signup" >Signup</a></li>
+                        <li><a href="/login" >Login</a></li>
+                    </ul>-->
+                </div>
+            <% } %>
+        </div>
+        <% if(user){ %>
+        <div class="container">
+            <div class="row navbarCategory" style="padding: 10px 0;">
+                <ul class="nav navbar-nav">
+                    <!--<li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                        <div class="dropdown-menu row">
+                            <div class="col-xs-4">
+                                col1
+                            </div>
+                            <div class="col-xs-4">
+                                col1
+                            </div>
+                            <div class="col-xs-4">
+                                col1
+                            </div>
+                        </div>
+                    </li>-->
+                    <% for(category in categories) { %>
+                    <li>
+                        <a href="/products/<%= categories[category]._id %>" style="color: #000; font-weight: bold; font-size: 1.2em;">
+                            <%= categories[category].name %></a>
+                    </li>
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+        <% } %>
     </div>
 </nav>

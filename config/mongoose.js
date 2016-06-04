@@ -7,7 +7,6 @@ module.exports = function () {
 
         console.log("connected to database successfully")
     });
-
-    require("../models/category");
+    
     return db;
 };

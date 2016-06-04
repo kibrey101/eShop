@@ -1,0 +1,133 @@
+<% layout("layout") -%>
+
+<div class="container">
+    <% if (removeMessage.length > 0) { %>
+    <div class="alert alert-success alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert" aria-label="close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <%= removeMessage %>
+    </div>
+    <% } %>
+    <div class="row">
+        <% if(foundCart.items.length == 0) { %>
+            <h3 class="text-center" style="margin-top: 50px;text-decoration: none;">OOps! No items in cart: <a href="/" style="text-decoration: none;color:darkgreen;">Go back to buy items</a></h3>
+        <% } else { %>
+            <div class="col-sm-8 col-md-8">
+               <% for(var item in foundCart.items) { %>
+                    <div class="list-group">
+                        <div class="list-group-item">
+                            <span class="row">
+                                <div class="col-sm-3 col-md-3">
+                                    <span><img src="<%= foundCart.items[item].item.image %>" alt=""
+                                        class="product-image"></span>
+                                </div>
+                                <div class="col-md-4">
+                                    <h3>
+                                        <a class="list-group-item-heading" href="product/<%= foundCart.items[item].item._id %>"><%= foundCart.items[item].item.name %></a>
+                                    </h3>
+                                </div>
+                                <div class="col-md-3">
+                                    <p>Quantity: <%= foundCart.items[item].quantity %></p>
+                                    <div class="btn-group" role="group" aria-label="..." >
+                                        <button type="button" id="minus" class="btn btn-default">-</button>
+                                        <button type="button" id="total" class="btn btn-default">1</button>
+                                        <button type="button" id="plus" class="plus btn btn-default">+</button>
+                                    </div>
+
+                                </div>
+                                <div class="col-sm-1 col-md-1">
+                                    <form action="/remove" method="post">
+                                        <div class="form-group">
+                                            <input type="hidden" name="item" value="<%= foundCart.items[item]._id %>">
+                                            <button type="submit" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+               <% } %>
+            </div>
+            <div class="col-sm-3 col-md-3">
+                <div class="list-group">
+                    <span class="list-group-item">
+                        <h4>Total: $ <span>100</span></h4>
+                        <div class="form-group">
+                            <input type="hidden" value="100">
+                            <button type="submit" class="btn btn-primary"
+                                    data-toggle="modal" data-target="#myModal">Pay with stripe</button>
+                        </div>
+                    </span>
+                </div>
+            </div>
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Pay with stripe</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xs-12 col-md-4">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h3 class="panel-title">
+                                                    <img class="pull-right" style="clip-path: inset(10px 20px 30px 40px)" src="http://i76.imgup.net/accepted_c22e0.png">
+                                                    Pay with stripe</h3>
+                                            </div>
+                                            <div class="panel-body">
+                                                <form role="form" id="payment-form" method="post" action="/payment">
+                                                    <input type="hidden" name="stripeMoney" value="100">
+                                                    <div class="row">
+                                                        <div class="col-xs-12">
+                                                            <div class="form-group">
+                                                                <label for="cardNumber">CARD NUMBER</label>
+                                                                <input type="text" class="form-control" name="cardNumber" placeholder="Valid Card Number" required autofocus data-stripe="number" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-xs-7 col-md-7">
+                                                            <div class="form-group">
+                                                                <label for="expMonth">EXPIRATION DATE</label>
+                                                                <div class="col-xs-6 col-lg-6 pl-ziro">
+                                                                    <input type="text" class="form-control" name="expMonth" placeholder="MM" required data-stripe="exp_month" />
+                                                                </div>
+                                                                <div class="col-xs-6 col-lg-6 pl-ziro">
+                                                                    <input type="text" class="form-control" name="expYear" placeholder="YY" required data-stripe="exp_year" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xs-5 col-md-5 pull-right">
+                                                            <div class="form-group">
+                                                                <label for="cvCode">CV CODE</label>
+                                                                <input type="password" class="form-control" name="cvCode" placeholder="CV" required data-stripe="cvc" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-xs-12">
+                                                            <button class="btn btn-success btn-lg btn-block" type="submit">Pay</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="display:none;">
+                                                        <div class="col-xs-12">
+                                                            <p class="payment-errors"></p>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+    </div>
+</div>

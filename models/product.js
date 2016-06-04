@@ -11,14 +11,16 @@ var ProductSchema = new Schema({
         trim: true
     },
     price: {type: Number},
-    image: {type: String}
+    image: {type: String},
+    manufacturer: {type: String},
+    description: {type: String}
 });
 
 ProductSchema.plugin(mongoosastic, {
     hosts: [
-        "localhost:9200",
-        'https://bEKlklRJkOiBxk588NYAmP3Q1eSFiEel:@jani.east-us.azr.facetflow.io'
+        //"localhost:9200",
+        'https://UuKuiUlvBEWdcYYhxHXaTwycqF84HMVk:@paulhk.east-us.azr.facetflow.io'
     ]
 });
 
-module.exports = mongoose.model("product", ProductSchema);
+module.exports = mongoose.model("Product", ProductSchema);

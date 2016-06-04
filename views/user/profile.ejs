@@ -2,7 +2,7 @@
 <div class="container">
     <div class="row">
         <h1>Hello <%= user.fullName %></h1>
-        <img src="<%= user.profile.picture%>" alt="" class="img img-circle img-responsive img-center">
+        <img src="<%= user.profile.picture%>" alt="" class="img img-rounded img-responsive img-center">
         <p>Email: <%= user.email %></p>
         <% if(user.address === "" || typeof user.address === "undefined") { %>
             <p>Address: <span style="color:red; font-weight: bold;">You have no address</span></p>
