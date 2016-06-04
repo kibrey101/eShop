@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53b1bf2d-138c-42a8-b62a-ff4e2f17fcf2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/mainControllers.js" afterPath="$PROJECT_DIR$/controllers/mainControllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/mainRoutes.js" afterPath="$PROJECT_DIR$/routes/mainRoutes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/category.js" afterPath="$PROJECT_DIR$/models/category.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/main/category.ejs" afterPath="$PROJECT_DIR$/views/main/category.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/main/product-main.ejs" afterPath="$PROJECT_DIR$/views/main/product-main.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/main/search-result.ejs" afterPath="$PROJECT_DIR$/views/main/search-result.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/partials/navbar.ejs" afterPath="$PROJECT_DIR$/views/partials/navbar.ejs" />
     </list>
     <ignored path="eshop.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,16 +24,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="category.ejs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="category.ejs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/main/category.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-663">
-              <caret line="21" column="64" selection-start-line="21" selection-start-column="64" selection-end-line="21" selection-end-column="64" />
+            <state relative-caret-position="51">
+              <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
               <folding>
                 <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#1;n#a#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <marker date="1465014794454" expanded="false" signature="4016:4028" ph="..." />
               </folding>
             </state>
           </provider>
@@ -96,7 +90,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mainControllers.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mainControllers.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/mainControllers.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="338">
@@ -189,7 +183,6 @@
         <option value="$PROJECT_DIR$/views/partials/javascriptLibs.ejs" />
         <option value="$PROJECT_DIR$/views/main/product.ejs" />
         <option value="$PROJECT_DIR$/config/mongoose.js" />
-        <option value="$PROJECT_DIR$/models/category.js" />
         <option value="$PROJECT_DIR$/views/partials/footer.ejs" />
         <option value="$PROJECT_DIR$/views/user/profile.ejs" />
         <option value="$PROJECT_DIR$/api/api.js" />
@@ -198,11 +191,12 @@
         <option value="$PROJECT_DIR$/public/css/custom.css" />
         <option value="$PROJECT_DIR$/views/main/search-result.ejs" />
         <option value="$PROJECT_DIR$/views/main/product-main.ejs" />
-        <option value="$PROJECT_DIR$/views/main/category.ejs" />
         <option value="$PROJECT_DIR$/routes/mainRoutes.js" />
         <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/views/partials/navbar.ejs" />
         <option value="$PROJECT_DIR$/controllers/mainControllers.js" />
+        <option value="$PROJECT_DIR$/models/category.js" />
+        <option value="$PROJECT_DIR$/views/main/category.ejs" />
       </list>
     </option>
   </component>
@@ -579,12 +573,12 @@
       <workItem from="1464875913336" duration="2262000" />
       <workItem from="1464885380318" duration="19677000" />
       <workItem from="1464952980532" duration="1461000" />
-      <workItem from="1464954580493" duration="13390000" />
+      <workItem from="1464954580493" duration="14409000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="202480000" />
+    <option name="totallyTimeSpent" value="203499000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -970,19 +964,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/main/category.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-663">
-          <caret line="21" column="64" selection-start-line="21" selection-start-column="64" selection-end-line="21" selection-end-column="64" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#1;n#a#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <marker date="1465014794454" expanded="false" signature="4016:4028" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="318">
@@ -1007,14 +988,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/category.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/product.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -1028,6 +1001,26 @@
         <state relative-caret-position="338">
           <caret line="61" column="18" selection-start-line="61" selection-start-column="18" selection-end-line="61" selection-end-column="18" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/category.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/main/category.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#1;n#a#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

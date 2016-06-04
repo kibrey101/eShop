@@ -1,6 +1,7 @@
 <% layout("layout") %>
 <div class="container">
     <div class="row">
+        <% if(user) { %>
         <div class="col-xs-3">
             <div class="">
                 <h4>MANUFACTURERS</h4>
@@ -69,18 +70,8 @@
                     </div>
                 </div>
             </div>
-            <!--<button class="btn btn-default" type="button" data-toggle="collapse" data-target="#manuList1" aria-expanded="false"
-                    aria-controls="manuList1" style="width: 100%;">
-                A - F
-            </button>
-            <div class="nav" id="manuList1">
-                <% for(var i = 0; i <  manufacturers.length; i++ ) { %>
-                <li class="">
-                    <a href="#" class="btn btn success btn-lg"><%= manufacturers[i] %></a>
-                </li>
-                <% } %>
-            </div>-->
         </div>
+        <% } %>
         <div class="col-xs-9">
             <% for(var product in products) { %>
             <div class="col-xs-4 column productbox">
