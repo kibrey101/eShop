@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53b1bf2d-138c-42a8-b62a-ff4e2f17fcf2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/mainControllers.js" afterPath="$PROJECT_DIR$/controllers/mainControllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/userControllers.js" afterPath="$PROJECT_DIR$/controllers/userControllers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/custom.css" afterPath="$PROJECT_DIR$/public/css/custom.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/mainRoutes.js" afterPath="$PROJECT_DIR$/routes/mainRoutes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/main/category.ejs" afterPath="$PROJECT_DIR$/views/main/category.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/main/home.ejs" afterPath="$PROJECT_DIR$/views/main/home.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/partials/footer.ejs" afterPath="$PROJECT_DIR$/views/partials/footer.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/partials/navbar.ejs" afterPath="$PROJECT_DIR$/views/partials/navbar.ejs" />
     </list>
     <ignored path="eshop.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,7 +34,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="category.ejs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="category.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/main/category.ejs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="567">
@@ -48,6 +42,47 @@
               <folding>
                 <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="navbar.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/partials/navbar.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="321">
+              <caret line="82" column="62" selection-start-line="82" selection-start-column="62" selection-end-line="82" selection-end-column="73" />
+              <folding>
+                <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#2;n#div#0;n#div#0;n#nav#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#2;n#div#0;n#div#0;n#nav#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#nav#0;n#!!top" expanded="true" />
+                <marker date="1465058659256" expanded="false" signature="296:312" ph="..." />
+                <marker date="1465058659256" expanded="false" signature="984:1018" ph="..." />
+                <marker date="1465058659256" expanded="false" signature="1245:1256" ph="..." />
+                <marker date="1465058659256" expanded="false" signature="1633:1644" ph="..." />
+                <marker date="1465058659256" expanded="false" signature="1843:1915" ph="..." />
+                <marker date="1465058659256" expanded="false" signature="2223:2327" ph="..." />
+                <marker date="1465058659256" expanded="false" signature="2402:2413" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="custom.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/css/custom.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="22" column="148" selection-start-line="22" selection-start-column="148" selection-end-line="22" selection-end-column="148" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="search-result.ejs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/main/search-result.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="32" column="64" selection-start-line="32" selection-start-column="64" selection-end-line="32" selection-end-column="64" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -116,15 +151,15 @@
         <option value="$PROJECT_DIR$/views/main/search-result.ejs" />
         <option value="$PROJECT_DIR$/views/main/product-main.ejs" />
         <option value="$PROJECT_DIR$/server.js" />
-        <option value="$PROJECT_DIR$/views/partials/navbar.ejs" />
         <option value="$PROJECT_DIR$/models/category.js" />
-        <option value="$PROJECT_DIR$/public/css/custom.css" />
         <option value="$PROJECT_DIR$/views/main/home.ejs" />
         <option value="$PROJECT_DIR$/controllers/userControllers.js" />
         <option value="$PROJECT_DIR$/views/partials/footer.ejs" />
         <option value="$PROJECT_DIR$/routes/mainRoutes.js" />
         <option value="$PROJECT_DIR$/controllers/mainControllers.js" />
         <option value="$PROJECT_DIR$/views/main/category.ejs" />
+        <option value="$PROJECT_DIR$/views/partials/navbar.ejs" />
+        <option value="$PROJECT_DIR$/public/css/custom.css" />
       </list>
     </option>
   </component>
@@ -501,12 +536,12 @@
       <workItem from="1464875913336" duration="2262000" />
       <workItem from="1464885380318" duration="19677000" />
       <workItem from="1464952980532" duration="1461000" />
-      <workItem from="1464954580493" duration="29323000" />
+      <workItem from="1464954580493" duration="30869000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="218413000" />
+    <option name="totallyTimeSpent" value="219959000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-2" width="1936" height="1056" extended-state="6" />
@@ -835,33 +870,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/main/search-result.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="32" column="64" selection-start-line="32" selection-start-column="64" selection-end-line="32" selection-end-column="64" />
-          <folding>
-            <element signature="e#2250#2276#0#HTML" expanded="false" />
-            <element signature="e#2371#2397#0#HTML" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/partials/navbar.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="90" column="30" selection-start-line="90" selection-start-column="30" selection-end-line="90" selection-end-column="30" />
-          <folding>
-            <marker date="1465017901732" expanded="false" signature="296:312" ph="..." />
-            <marker date="1465017901732" expanded="false" signature="984:1018" ph="..." />
-            <marker date="1465017901732" expanded="false" signature="1245:1256" ph="..." />
-            <marker date="1465017901732" expanded="false" signature="1633:1644" ph="..." />
-            <marker date="1465017901732" expanded="false" signature="1843:1915" ph="..." />
-            <marker date="1465017901732" expanded="false" signature="2223:2327" ph="..." />
-            <marker date="1465017901732" expanded="false" signature="2402:2413" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/partials/footer.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -874,14 +882,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="83" selection-start-line="21" selection-start-column="83" selection-end-line="21" selection-end-column="83" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/custom.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="58" column="59" selection-start-line="58" selection-start-column="59" selection-end-line="58" selection-end-column="59" />
           <folding />
         </state>
       </provider>
@@ -910,18 +910,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/main/product-main.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="117" selection-end-column="6" />
-          <folding>
-            <marker date="1465013846156" expanded="false" signature="1335:1365" ph="..." />
-            <marker date="1465013846156" expanded="false" signature="1435:1459" ph="..." />
-            <marker date="1465013846156" expanded="false" signature="3081:3099" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/mainRoutes.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -945,6 +933,53 @@
           <folding>
             <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/main/product-main.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="117" selection-end-column="6" />
+          <folding>
+            <marker date="1465013846156" expanded="false" signature="1335:1365" ph="..." />
+            <marker date="1465013846156" expanded="false" signature="1435:1459" ph="..." />
+            <marker date="1465013846156" expanded="false" signature="3081:3099" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/partials/navbar.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="82" column="62" selection-start-line="82" selection-start-column="62" selection-end-line="82" selection-end-column="73" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#2;n#div#0;n#div#0;n#nav#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#2;n#div#0;n#div#0;n#nav#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#nav#0;n#!!top" expanded="true" />
+            <marker date="1465058659256" expanded="false" signature="296:312" ph="..." />
+            <marker date="1465058659256" expanded="false" signature="984:1018" ph="..." />
+            <marker date="1465058659256" expanded="false" signature="1245:1256" ph="..." />
+            <marker date="1465058659256" expanded="false" signature="1633:1644" ph="..." />
+            <marker date="1465058659256" expanded="false" signature="1843:1915" ph="..." />
+            <marker date="1465058659256" expanded="false" signature="2223:2327" ph="..." />
+            <marker date="1465058659256" expanded="false" signature="2402:2413" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/custom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="22" column="148" selection-start-line="22" selection-start-column="148" selection-end-line="22" selection-end-column="148" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/main/search-result.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="32" column="64" selection-start-line="32" selection-start-column="64" selection-end-line="32" selection-end-column="64" />
+          <folding />
         </state>
       </provider>
     </entry>

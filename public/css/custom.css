@@ -10,7 +10,7 @@
 .navbarCart a:hover {
     background-color: #fff!important;
 }
-.navbarCart{}
+.navbarCart{margin-top:0;}
 .badge{
     height: 25px; border-radius: 12.5px;
     width:25px; margin:0 0 30px -10px;
@@ -20,7 +20,7 @@
     padding: 5px;}
 
 .navbarCart a {border: none;}
-.navbarProfile a {color:#000!important;font-weight: bold; text-decoration: none!important;}
+.navbarProfile a {color:#000!important;font-weight: bold; text-decoration: none!important;background-color: #EBEFF0;padding: 10px 20px;margin-top: 9px;}
 .navbarSearch input{ padding: 20px; outline: none;
     border: none !important;
     -webkit-box-shadow: none !important;
