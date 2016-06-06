@@ -42,7 +42,7 @@ app.use(function (req, res, next) {
     next();
 });
 
-app.use(require("./middleware/middleware"));
+
 
 app.use(function (req, res, next) {
    Category.find({}, function (err, categories) {
@@ -52,6 +52,7 @@ app.use(function (req, res, next) {
    });
 });
 
+app.use(require("./middleware/middleware"));
 app.engine("ejs", ejsMate);
 app.set("view engine", "ejs");
 

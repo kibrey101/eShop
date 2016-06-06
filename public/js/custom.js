@@ -1,7 +1,7 @@
 $(function () {
     $("#search").keyup(function () {
         var search_term = $(this).val();
-
+        
         $.ajax({
             method: "POST",
             url: "/api/search",
@@ -21,6 +21,23 @@ $(function () {
             },
             error: function (error) {
                 console.log(error);
+            }
+        });
+    });
+
+    /*$(document).on("click", ".homeSubmit", function (e) {
+        e.preventDefault();
+
+    });*/
+
+    $(document).on("click", "#addToCart", function (e) {
+        e.preventDefault();
+        $.ajax({
+            method: "POST",
+            url: "/addToCart",
+            data: $("#productForm").serialize(),
+            success: function () {
+               $("#cartBadge").load(location.href + " #cartBadge>*","");
             }
         });
     });

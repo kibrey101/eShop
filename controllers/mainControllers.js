@@ -218,7 +218,6 @@ exports.payment = function (req, res, next) {
     res.redirect("/");
 };
 
-
 Product.createMapping(function (err, mapping) {
     if(err){
         console.log("error while creating mapping");

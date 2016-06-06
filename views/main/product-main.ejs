@@ -74,7 +74,7 @@
                     <h4><%= products[product].name %></h4>
                 </div>
                 <div class="productprice">
-                    <form action="/addToCart" method="post">
+                    <form action="/addToCart" method="post" id="<%= products[product]._id %>">
                         <div class="row">
                             <div class="col-md-6">
                                 <input type="hidden" class="form-control" name="quantity" value="1">
@@ -83,7 +83,7 @@
 
                                 <% if(user){ %>
                                     <div class="pull-left" style="padding: 10px 5px;">
-                                        <button type="submit" class="btn btn-primary btn-sm" style="margin-right: 1px;">ADD TO CART</button>
+                                        <button type="submit" class="btn btn-primary btn-sm homeSubmit" style="margin-right: 1px;">ADD TO CART</button>
                                     </div>
                                 <% } else { %>
                                     <a href="/login" class="btn btn-warning">Signin to make order</a>
