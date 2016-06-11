@@ -6,7 +6,7 @@ var Cart = require("../models/cart");
 
 exports.renderSignup = function (req, res) {
     if(req.user){
-        return res.redirect("/")
+        return res.redirect("/");
     }
     res.render("user/signup", {
         errors: req.flash("errors")

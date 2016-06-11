@@ -1,6 +1,7 @@
 var Product = require("../models/product");
 var Cart = require("../models/cart");
 var stripe = require("stripe")("sk_test_Oka1n8mYSm8qMfURCPsDh1od");
+var async = require("async");
 
 function paginate(req, res, next) {
     var itemsPerPage = 12;
@@ -148,8 +149,6 @@ exports.addToCart = function (req, res, next) {
                         var backURL=req.header('Referer') || '/';
                         return res.redirect(backURL);
                     });
-
-
                 }
             }
 

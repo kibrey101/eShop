@@ -1,25 +1,11 @@
 <% layout("layout") %>
 
-<div class="container">
-    <div class="jumbotron">
-        <div class="row">
-            <h1 class="text-center">Shop smart, save big</h1>
-            <!--<p class="text-center">Find you favorite product</p>
-            <div class="row">
-                <div class="col-md-6 col-md-offset-3">
-                    <div class="input-group col-md-12">
-                        <input id="search" type="text" class="form-control" name="search_term" placeholder="search for a product...">
-                        <span class="input-group-btn">
-                            <button type="submit" class="btn btn-primary">
-                                <i class="glyphicon glyphicon-search"></i></button>
-                        </span>
-                    </div>
-                </div>
-            </div>-->
-        </div>
+<div class="row">
+    <div class="row">
+        <h1 class="text-center">slider</h1>
     </div>
 </div>
-<div class="container">
+<div class="row">
     <% if (message.length > 0) { %>
     <div class="alert alert-success alert-dismissible">
         <button type="button" class="close" data-dismiss="alert" aria-label="close">
@@ -28,77 +14,84 @@
         <%= message %>
     </div>
     <% } %>
-    <div class="row" style="height: 300px!important;">
-        <% for(var product in products) { %>
-        <!--<div class="col-xs-4 col-sm-4 col-md-4" style="padding: 10px; margin: 10px 0;">
-            <a href="/product/<%= products[product]._id %>" style=" background-color: #eee;">
-                <div class="thumbnail">
-                    <img src="<%= products[product].image %>" alt="">
-                </div>
-                <h4><%= products[product].name %></h4><h4><%= products[product].manufacturer %></h4>
-            </a>
-            <div class="caption">
-                <h5><%= products[product].category.name %></h5>
-                <h5><%= products[product].price %></h5>
+</div>
+<!--<div class="row">
+    <% for(var product in products) { %>
+    <div class="col s3 m3 productbox">
+        <a href="/product/<%= products[product]._id %>" style="text-decoration: none; color:#000;">
+            <img src="<%= products[product].image %>" class="img-responsive">
+            <div class="producttitle">
+                <p><%= products[product].category.name %></p>
+                <h4><%= products[product].name %></h4>
             </div>
-            <div>
-                <form action="/addToCart" method="post">
+            <div class="productprice">
+                <form action="/addToCart" method="post" id="<%= products[product]._id %>">
                     <div class="row">
-                        <div class="col-md-6 col-sm-offset-3">
+                        <div class="col-md-6">
                             <input type="hidden" class="form-control" name="quantity" value="1">
-                            &lt;!&ndash;<div class="btn-group" role="group" aria-label="..." >
-                                <input type="hidden" name="quantity" id="quantity" value="1">
-                                <button type="button" id="minus" class="btn btn-default">-</button>
-                                <button type="button" id="total" class="btn btn-default">1</button>
-                                <button type="button" id="plus" class="plus btn btn-default">+</button>
-                            </div>&ndash;&gt;
                             <input type="hidden" name="product_id" id="product_id" value="<%= products[product]._id %>">
                             <input type="hidden" name="priceHidden" id="priceHidden" value="<%= products[product].price %>">
 
                             <% if(user){ %>
-                                <button type="submit" class="btn btn-primary btn-sm" style="margin-right: 1px;">Add to cart</button>
+                            <div class="pull-right" style="padding: 10px 5px;">
+                                <button type="submit" class="btn btn-primary btn-sm homeSubmit" style="margin-right: 1px;">ADD TO CART</button>
+                            </div>
                             <% } else { %>
-                                <a href="/login" class="btn btn-warning">Signin to make order</a>
+                            <a href="/login" class="btn btn-warning">Signin to make order</a>
                             <% } %>
                         </div>
                     </div>
                 </form>
-
+                &lt;!&ndash;<div class="pricetext">£8.95</div>&ndash;&gt;
             </div>
-        </div>-->
-        <div class="col-xs-3 column productbox">
-            <a href="/product/<%= products[product]._id %>" style="text-decoration: none; color:#000;">
-                <img src="<%= products[product].image %>" class="img-responsive">
-                <div class="producttitle">
-                    <p><%= products[product].category.name %></p>
-                    <h4><%= products[product].name %></h4>
+        </a>
+    </div>
+    <% } %>
+
+</div>-->
+<div class="row">
+    <% for(var product in products) { %>
+        <div class="col s12 m6 l3">
+            <div class="card">
+                <div class="card-image waves-effect waves-block waves-light activator">
+                    <a href="/product/<%= products[product]._id %>">
+                        <img src="/img/iphone.jpg" style="padding: 3px;">
+                    </a>
                 </div>
-                <div class="productprice">
-                    <form action="/addToCart" method="post" id="<%= products[product]._id %>">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <input type="hidden" class="form-control" name="quantity" value="1">
+                <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4"><i class="material-icons right">more_vert</i></span>
+                    <h6 class="productCategory"><%= products[product].category.name %></h6>
+                    <h6 class="productName"><%= products[product].name %></h6>
+                </div>
+                <div class="card-action" style="padding: 0 3px;">
+                    <form action="/addToCart" method="post">
+                        <div class="row" style="margin: 20px 0 0 0;">
+                                <input type="hidden" class="form-control" name="quantity" id="quantity" value="1">
                                 <input type="hidden" name="product_id" id="product_id" value="<%= products[product]._id %>">
                                 <input type="hidden" name="priceHidden" id="priceHidden" value="<%= products[product].price %>">
-
                                 <% if(user){ %>
-                                    <div class="pull-left" style="padding: 10px 5px;">
-                                        <button type="submit" class="btn btn-primary btn-sm homeSubmit" style="margin-right: 1px;">ADD TO CART</button>
-                                    </div>
+                                        <div class="col s2" style="padding: 0;">
+                                            <input placeholder="Qty" id="total" type="text" class="validate s6"
+                                                   style="font-size: 12px;border: 1px solid #ccc; padding-left: 6px; height: 30px;border-radius: 1px;box-shadow: none;">
+                                        </div>
+                                        <div class="col s7">
+                                            <button type="submit" class="btn light-blue darken-2 homeAddToCart"
+                                                    style="padding-left: 5px; padding-right: 5px;">ADD TO CART</button>
+                                        </div>
+
                                 <% } else { %>
                                     <a href="/login" class="btn btn-warning">Signin to make order</a>
                                 <% } %>
-                            </div>
                         </div>
                     </form>
-                    <!--<div class="pricetext">£8.95</div>-->
                 </div>
-            </a>
+                <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4">Description<i class="material-icons right">close</i></span>
+                    <p><%= products[product].description %></p>
+                </div>
+            </div>
         </div>
-        <% } %>
-
-    </div>
-
+    <% } %>
 </div>
 <div class="container" style="margin: 0 0 60px 20px;">
     <div class="row">
