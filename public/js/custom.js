@@ -31,6 +31,7 @@ $(function () {
     });*/
 
     $(document).on("click", "#addToCart", function (e) {
+        alert("im clicked");
         e.preventDefault();
         $.ajax({
             method: "POST",
@@ -64,10 +65,12 @@ $(function () {
 
     });
 
-    $("#total").keyup(function (e) {
+    $(".total").keyup(function (e) {
+        alert($(this).prev(".quantity").val());
         e.preventDefault();
-        var quantity = parseInt($("#total").val());
-        $("#quantity").val(quantity);
+        var quantity = parseInt($(this).val());
+        $(this).prev(".quantity").val(quantity);
+        alert($(this).prev(".quantity").val());
     });
 
     function stripeResponseHandler(status, response) {

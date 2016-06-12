@@ -62,12 +62,13 @@
         bar for language and stuff
     </div>
     <div class="nav-wrapper mainBar">
-        <div class="container">
+        <div>
             <div class="row" style="margin-top: 20px;">
                 <div class="col s3" style="margin-top: 10px;">
-                    <h4><a href="/" class="left" style="color: #000;">E-CATALOG</a></h4>
+                    <h4><a href="/" class="right" style="color: #000;">E-CATALOG</a></h4>
                 </div>
-                <div class="col s4 offset-m1">
+                <% if(user) { %>
+                <div class="col s3 offset-m2">
                     <div class="search-wrapper">
                         <form action="/search" method="post">
                             <div class="row">
@@ -83,9 +84,9 @@
                         </form>
                     </div>
                 </div>
-                <div class="col s2">
+                <div class="col s4">
                     <button class='btn dropdown-button navbarProfile' data-beloworigin="true" data-activates='accountDropdown'>
-                        kbreab tsegai<i class="material-icons right"
+                        <%= user.fullName %><i class="material-icons right"
                                                style="width: 10px;height: 10px; line-height: 35px;">keyboard_arrow_down</i></button>
 
                     <!-- Dropdown Structure -->
@@ -95,10 +96,20 @@
                         <li><a href="/logout" style="color:#000; text-align: center;">Log out</a></li>
 
                     </ul>
+                    <a class="btn navbarCart" href="/cart">
+                        <img src="/img/Ecommerce-Shopping-Bag-icon.png"  id="cartImage">
+                    </a>
                 </div>
-                <div class="col s1">
-                    <a class="btn navbarCart left"><img src="/img/Ecommerce-Shopping-Bag-icon.png"  id="cartImage" style="width: 45px;margin-right: 5px;"></a>
+                <!--<div class="col s1">
+                    <a class="btn navbarCart left" href="/cart">
+                        <img src="/img/Ecommerce-Shopping-Bag-icon.png"  id="cartImage" style="width: 45px;margin-right: 5px;">
+                    </a>
+                </div>-->
+                <% } else { %>
+                <div class="col right">
+                    <a href="/login" class="navbarLogin">Login</a>
                 </div>
+                <% } %>
             </div>
 
             
