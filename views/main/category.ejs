@@ -1,149 +1,220 @@
 <% layout("layout") %>
-<div class="container">
-    <div class="row">
-        <% if(user && products.length > 0) { %>
-        <div class="col-xs-3">
-            <div class="">
-                <h4>MANUFACTURERS</h4>
-            </div>
-            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                <div class="panel panel-default">
-                    <div class="panel-heading" role="tab" id="headingOne" style="padding: 0;">
-                        <h4 class="panel-title">
-                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true"
-                               style="width:100%; text-align: left;" aria-controls="collapseOne" class="btn btn-default manuTab">
-                                <p>A - G <span class="pull-right">(<%= manufacturerAG.length %>)</span></p>
-                            </a>
-                        </h4>
-                    </div>
-                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                        <div class="panel-body">
-                            <ul class="nav">
+
+<div class="row">
+    <% if(user && products.length > 0) { %>
+    <div class="col s3" style="margin-top: 22px;">
+        <div class="card">
+           <div class="card-title" style="padding: 10px 0 0 0;">
+               <h5 style="padding: 5px 10px; border-bottom: 1px solid #eee;">Manufacturers</h5>
+           </div>
+            <div class="card-content" style="box-shadow: none;">
+                <ul class="collapsible" data-collapsible="expandable" style="margin: 0 10px 5px 5px;box-shadow: none;">
+                    <li>
+                        <div class="collapsible-header" style="background-color: #eee;"><i class="material-icons right" style="margin-right:0;">add</i>A - G (<%= manufacturerAG.length %>)</div>
+                        <div class="collapsible-body">
+                            <ul class="collection">
                                 <% for(var i = 0; i <  manufacturerAG.length; i++ ) { %>
-                                <li class="">
+                                <li class="collection-item">
                                     <a href="/products/<%= currentCategory %>/<%= manufacturerAG[i] %>" class="btn btn success btn-lg pull-left" style="width: 100%;text-align: left;"><%= manufacturerAG[i] %></a>
                                 </li>
                                 <% } %>
                             </ul>
                         </div>
-                    </div>
-                </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading" role="tab" id="headingTwo" style="padding: 0;">
-                        <h4 class="panel-title">
-                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true"
-                               style="width:100%; text-align: left;" aria-controls="collapseTwo" class="btn btn-default manuTab">
-                                <p>H - N <span class="pull-right">(<%= manufacturerHN.length %>)</span></p>
-                            </a>
-                        </h4>
-                    </div>
-                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                        <div class="panel-body">
-                            <ul class="nav">
+                    </li>
+                    <li>
+                        <div class="collapsible-header" style="background-color: #eee;"><i class="material-icons right" style="margin-right:0;">add</i>H - N (<%= manufacturerHN.length %>)</div>
+                        <div class="collapsible-body">
+                            <ul class="collection">
                                 <% for(var i = 0; i <  manufacturerHN.length; i++ ) { %>
-                                <li class="">
-                                    <a href="/products/<%= currentCategory %>/<%= manufacturerHN[i] %>" class="btn btn success btn-lg pull-left" style="width: 100%;text-align: left;"><%= manufacturerHN[i] %></a>
-                                </li>
+
+                                    <a href="/products/<%= currentCategory %>/<%= manufacturerHN[i] %>" class="collection-item" style="width: 100%;text-align: left;"><%= manufacturerHN[i] %></a>
+
                                 <% } %>
                             </ul>
                         </div>
-                    </div>
-                </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading" role="tab" id="headingThree" style="padding: 0;">
-                        <h4 class="panel-title">
-                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true"
-                               style="width:100%; text-align: left;" aria-controls="collapseThree" class="btn btn-default manuTab">
-                                <p>O - U <span class="pull-right">(<%= manufacturerOU.length %>)</span></p>
-                            </a>
-                        </h4>
-                    </div>
-                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                        <div class="panel-body">
-                            <ul class="nav">
+                    </li>
+                    <li>
+                        <div class="collapsible-header" style="background-color: #eee;"><i class="material-icons right" style="margin-right:0;">add</i>O - U (<%= manufacturerOU.length %>)</div>
+                        <div class="collapsible-body">
+                            <ul class="collection">
                                 <% for(var i = 0; i <  manufacturerOU.length; i++ ) { %>
-                                <li class="">
+                                <li class="collection-item">
                                     <a href="/products/<%= currentCategory %>/<%= manufacturerOU[i] %>" class="btn btn success btn-lg pull-left" style="width: 100%;text-align: left;"><%= manufacturerOU[i] %></a>
                                 </li>
                                 <% } %>
                             </ul>
                         </div>
-                    </div>
-                </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading" role="tab" id="headingFour" style="padding: 0;">
-                        <h4 class="panel-title">
-                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true"
-                               style="width:100%; text-align: left;" aria-controls="collapseFour" class="btn btn-default manuTab">
-                                <p>V - Z <span class="pull-right">(<%= manufacturerVZ.length %>)</span></p>
-                            </a>
-                        </h4>
-                    </div>
-                    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
-                        <div class="panel-body">
-                            <ul class="nav">
+                    </li>
+                    <li>
+                        <div class="collapsible-header" style="background-color: #eee;"><i class="material-icons right" style="margin-right:0;">add</i>V - Z (<%= manufacturerVZ.length %>)</div>
+                        <div class="collapsible-body">
+                            <ul class="collection">
                                 <% for(var i = 0; i <  manufacturerVZ.length; i++ ) { %>
-                                <li class="">
+                                <li class="collection-item">
                                     <a href="/products/<%= currentCategory %>/<%= manufacturerVZ[i] %>" class="btn btn success btn-lg pull-left" style="width: 100%;text-align: left;"><%= manufacturerVZ[i] %></a>
                                 </li>
                                 <% } %>
                             </ul>
                         </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+       <!-- <div class="">
+            <h5>MANUFACTURERS</h5>
+        </div>
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne" style="padding: 0;">
+                    <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true"
+                           style="width:100%; text-align: left;" aria-controls="collapseOne" class="btn btn-default manuTab">
+                            <p>A - G <span class="pull-right">(<%= manufacturerAG.length %>)</span></p>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+                        <ul class="nav">
+                            <% for(var i = 0; i <  manufacturerAG.length; i++ ) { %>
+                            <li class="">
+                                <a href="/products/<%= currentCategory %>/<%= manufacturerAG[i] %>" class="btn btn success btn-lg pull-left" style="width: 100%;text-align: left;"><%= manufacturerAG[i] %></a>
+                            </li>
+                            <% } %>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </div>
-        <% } else { %>
-            <div class="container" style="margin-bottom: 50%;">
-                <h3 class="text-center">No products in this category yet!</h3>
-            </div>
-        <% } %>
-        <div class="col-xs-9" style="margin-top: 20px;">
-            <% for(var product in products) { %>
-            <div class="col-xs-4 column productbox">
-                <a href="/product/<%= products[product]._id %>" style="text-decoration: none; color:#000;">
-                    <img src="<%= products[product].image %>" class="img-responsive">
-                    <div class="producttitle">
-                        <h6 style="color: #777; font-weight: normal;"><%= products[product].category.name %></h6>
-                        <h5 style="font-weight: bold;"><%= products[product].name %></h5>
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingTwo" style="padding: 0;">
+                    <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true"
+                           style="width:100%; text-align: left;" aria-controls="collapseTwo" class="btn btn-default manuTab">
+                            <p>H - N <span class="pull-right">(<%= manufacturerHN.length %>)</span></p>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                    <div class="panel-body">
+                        <ul class="nav">
+                            <% for(var i = 0; i <  manufacturerHN.length; i++ ) { %>
+                            <li class="">
+                                <a href="/products/<%= currentCategory %>/<%= manufacturerHN[i] %>" class="btn btn success btn-lg pull-left" style="width: 100%;text-align: left;"><%= manufacturerHN[i] %></a>
+                            </li>
+                            <% } %>
+                        </ul>
                     </div>
-                    <div class="productprice">
-                        <form action="/addToCart" method="post">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <input type="hidden" class="form-control" name="quantity" value="1">
-                                    <input type="hidden" name="product_id" id="product_id" value="<%= products[product]._id %>">
-                                    <input type="hidden" name="priceHidden" id="priceHidden" value="<%= products[product].price %>">
-
-                                    <% if(user){ %>
-                                    <div class="pull-left" style="padding: 10px 5px;">
-                                        <button type="submit" class="btn btn-primary btn-sm" style="margin-right: 1px;">ADD TO CART</button>
-                                    </div>
-                                    <% } else { %>
-                                    <a href="/login" class="btn btn-warning">Signin to make order</a>
-                                    <% } %>
-                                </div>
-                            </div>
-                        </form>
-                        <!--<div class="pricetext">£8.95</div>-->
-                    </div>
-                </a>
+                </div>
             </div>
-            <% } %>
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingThree" style="padding: 0;">
+                    <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true"
+                           style="width:100%; text-align: left;" aria-controls="collapseThree" class="btn btn-default manuTab">
+                            <p>O - U <span class="pull-right">(<%= manufacturerOU.length %>)</span></p>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                    <div class="panel-body">
+                        <ul class="nav">
+                            <% for(var i = 0; i <  manufacturerOU.length; i++ ) { %>
+                            <li class="">
+                                <a href="/products/<%= currentCategory %>/<%= manufacturerOU[i] %>" class="btn btn success btn-lg pull-left" style="width: 100%;text-align: left;"><%= manufacturerOU[i] %></a>
+                            </li>
+                            <% } %>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingFour" style="padding: 0;">
+                    <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true"
+                           style="width:100%; text-align: left;" aria-controls="collapseFour" class="btn btn-default manuTab">
+                            <p>V - Z <span class="pull-right">(<%= manufacturerVZ.length %>)</span></p>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                    <div class="panel-body">
+                        <ul class="nav">
+                            <% for(var i = 0; i <  manufacturerVZ.length; i++ ) { %>
+                            <li class="">
+                                <a href="/products/<%= currentCategory %>/<%= manufacturerVZ[i] %>" class="btn btn success btn-lg pull-left" style="width: 100%;text-align: left;"><%= manufacturerVZ[i] %></a>
+                            </li>
+                            <% } %>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+    </div>
+    <% } else { %>
+    <div class="row">
+        <div class="container">
+            <h4 class="left">No products in this category yet!</h4>
         </div>
     </div>
+    <% } %>
+    <div class="col s9" style="margin-top: 20px;">
+        <% for(var product in products) { %>
+        <div class="col s12 m6 l4">
+            <div class="card">
+                <div class="card-image waves-effect waves-block waves-light activator">
+                    <a href="/product/<%= products[product]._id %>">
+                        <img src="/img/iphone.jpg" style="padding: 3px;">
+                    </a>
+                </div>
+                <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4"><i class="material-icons right">more_vert</i></span>
+                    <h6 class="productCategory"><%= products[product].category.name %></h6>
+                    <h6 class="productName"><%= products[product].name %></h6>
+                </div>
+                <div class="card-action" style="padding: 0 6px;">
+                    <form action="/addToCart" method="post">
+                        <div class="row" style="margin: 20px 0 0 0;">
+
+                            <input type="hidden" name="product_id" id="product_id" value="<%= products[product]._id %>">
+                            <input type="hidden" name="priceHidden" id="priceHidden" value="<%= products[product].price %>">
+                            <% if(user){ %>
+                            <div class="col s2" style="padding: 0;">
+                                <input type="hidden" class="quantity" name="quantity" id="quantity" value="1">
+                                <input placeholder="Qty" id="total" type="text" class="validate s6 total"
+                                       style="font-size: 12px;border: 1px solid #ccc; padding-left: 6px; height: 30px;border-radius: 1px;box-shadow: none;">
+                            </div>
+                            <div class="col s7">
+                                <button type="submit" class="btn red darken-2 homeAddToCart"
+                                        style="padding-left: 5px; padding-right: 5px;">ADD TO CART</button>
+                            </div>
+
+                            <% } else { %>
+                            <a href="/login" class="btn btn-warning">Signin to make order</a>
+                            <% } %>
+                        </div>
+                    </form>
+                </div>
+                <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4">Description<i class="material-icons right">close</i></span>
+                    <p><%= products[product].description %></p>
+                </div>
+            </div>
+        </div>
+        <% } %>
+    </div>
 </div>
+
 <div class="container" style="margin-bottom: 60px;">
-    <div class="col-xs-9 col-xs-offset-3">
+    <div class="row">
         <ul class="pagination" text="center">
             <li>
                 <% for(i=1; i<=pages; i++) { %>
-                    <% if(i===1 ) { %>
-                        <li><a href="/products/<%= currentCategory %><%= currentManufacturer %>"><%= i %></a></li>
-                    <% } else { %>
-                        <li><a href="/products/<%= currentCategory %><%= currentManufacturer %>page/<%= i %>"><%= i %></a></li>
-                    <% } %>
-                <% } %>
+                <% if(i===1 ) { %>
+            <li><a href="/products/<%= currentCategory %><%= currentManufacturer %>"><%= i %></a></li>
+            <% } else { %>
+            <li><a href="/products/<%= currentCategory %><%= currentManufacturer %>page/<%= i %>"><%= i %></a></li>
+            <% } %>
+            <% } %>
             </li>
         </ul>
 

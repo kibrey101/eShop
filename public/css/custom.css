@@ -1,3 +1,12 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
 .navbar{
     background-color: #ffffff;
 }
@@ -18,38 +27,8 @@
 
 .navbarSearch input:active{ border: none!important; }
 
-.productbox {
-    background-color:#ffffff;
-    padding:20px;
-    margin-bottom:10px; border: 1px solid #F7F9FA;
-    -webkit-box-shadow: 0 3px 3px -3px  #999;
-    -moz-box-shadow: 0 3px 3px -3px  #999;
-    box-shadow: 0 3px 3px -3px #999;
-}
-.producttitle {
-    font-weight:bold;
-    padding:5px 0; overflow: hidden;
-}
-
-.productprice {
-    border-top:1px solid #dadada;
-    padding-top:5px;
-}
-
-.pricetext {
-    font-weight:bold;
-    font-size:1.4em;
-}
-
-.manuTab{
-    border: none !important;
-    -webkit-box-shadow: none !important;
-    -moz-box-shadow: none !important;
-    box-shadow: none !important; background-color: #EBEFF0;
-}
-
 nav{
-     height: 200px!important; background-color: #fff!important;
+     height: 260px!important; background-color: #fff!important;
 }
 
 .topBar{
@@ -78,12 +57,14 @@ nav{
     height: 52px!important;margin-top: 20px!important;
 }
 .navbarCart{
-    background-color: #fff!important;width: 45px!important;
+    background-color: #fff!important;width: 115px!important;
     color:#000!important; font-weight: bold; padding: 0!important;
-    box-shadow: none!important; vertical-align: middle;
-    height: 52px!important;margin: 17px 0 0 5px!important;
+    box-shadow: none!important;
+
 }
 
 #cartImage{
-     margin-top: 6px; width: 45px;
+     width: 50px;margin: 20px 0 0 0!important;padding:0!important;
  }
+
+

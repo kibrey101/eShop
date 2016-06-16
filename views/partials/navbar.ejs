@@ -57,18 +57,18 @@
     </div>
 </nav>
 -->
-<nav>
-    <div class="nav-wrapper topBar">
+<nav >
+    <div class="nav-wrapper topBar center">
         bar for language and stuff
     </div>
     <div class="nav-wrapper mainBar">
-        <div>
+        <div class="container">
             <div class="row" style="margin-top: 20px;">
                 <div class="col s3" style="margin-top: 10px;">
-                    <h4><a href="/" class="right" style="color: #000;">E-CATALOG</a></h4>
+                    <h4><a href="/" class="" style="color: #000;">E-CATALOG</a></h4>
                 </div>
                 <% if(user) { %>
-                <div class="col s3 offset-m2">
+                <div class="col s4 offset-m1">
                     <div class="search-wrapper">
                         <form action="/search" method="post">
                             <div class="row">
@@ -77,27 +77,33 @@
                                 </div>
                                 <div class="col s1">
                                     <button type="submit" style="border: none;margin-left: -62px;height: 50px; margin-top: 20px;background-color: #eee;">
-                                        <i class="material-icons" style="color:#000;margin-top: -5px;">search</i>
+                                        <i class="material-icons" style="color:#000;margin: -5px 0 0 20px;">search</i>
                                     </button>
                                 </div>
                             </div>
                         </form>
                     </div>
                 </div>
-                <div class="col s4">
-                    <button class='btn dropdown-button navbarProfile' data-beloworigin="true" data-activates='accountDropdown'>
+                <div class="col s3">
+                    <button class='btn dropdown-button navbarProfile right' data-beloworigin="true" data-activates='accountDropdown'>
                         <%= user.fullName %><i class="material-icons right"
-                                               style="width: 10px;height: 10px; line-height: 35px;">keyboard_arrow_down</i></button>
+                                               style="width: 10px;height: 10px; line-height: 35px;position: relative;">keyboard_arrow_down</i></button>
 
                     <!-- Dropdown Structure -->
-                    <ul id='accountDropdown' class='dropdown-content' style="margin-top: 22px; color:#000; text-align: center;">
+                    <ul id='accountDropdown' class='dropdown-content right' style="margin-top: 22px; color:#000; text-align: center;">
                         <li><a href="/profile" style="color:#000; text-align: center;">Profile</a></li>
                         <li class="divider"></li>
                         <li><a href="/logout" style="color:#000; text-align: center;">Log out</a></li>
 
                     </ul>
-                    <a class="btn navbarCart" href="/cart">
-                        <img src="/img/Ecommerce-Shopping-Bag-icon.png"  id="cartImage">
+                </div>
+                <div class="col s1 left" style="padding: 0;margin: 0;">
+                    <a class="btn navbarCart left" href="/cart">
+                        <img src="/img/Ecommerce-Shopping-Bag-icon.png"  id="cartImage" class="left">
+                        <% if(cart > 0) { %>
+                            <span style="float: left;margin: 20px 0 0 -5px;font-size: 1em;background-color: #eee; min-width: 30px; height: 35px;
+                        text-transform: lowercase;padding:0 5px;border-radius: 15px;border: 1px solid #ddd;"><%= cart %></span>
+                        <% } %>
                     </a>
                 </div>
                 <!--<div class="col s1">
@@ -106,12 +112,25 @@
                     </a>
                 </div>-->
                 <% } else { %>
-                <div class="col right">
+                <div class="col s3  right">
                     <a href="/login" class="navbarLogin">Login</a>
                 </div>
                 <% } %>
             </div>
-
+            <% if(user){ %>
+            <div class="nav-wrapper">
+                    <div class="row">
+                        <ul class="">
+                            <% for(category in categories) { %>
+                            <li class="navbarList">
+                                <a href="/products/<%= categories[category]._id %>" style="color: #000; font-weight: bold; font-size: 1.2em;">
+                                    <%= categories[category].name %></a>
+                            </li>
+                            <% } %>
+                        </ul>
+                    </div>
+            </div>
+            <% } %>
             
         </div>
 

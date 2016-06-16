@@ -99,3 +99,35 @@
         </ul>
     </div>
 </nav>-->
+
+
+<!--<div class="col-xs-4 column productbox">
+                    <a href="/product/<%= products[product]._id %>" style="text-decoration: none; color:#000;">
+                        <img src="<%= products[product].image %>" class="img-responsive">
+                        <div class="producttitle">
+                            <h6 style="color: #777; font-weight: normal;"><%= products[product].category.name %></h6>
+                            <h5 style="font-weight: bold;"><%= products[product].name %></h5>
+                        </div>
+                        <div class="productprice">
+                            <form action="/addToCart" method="post">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <input type="hidden" class="form-control" name="quantity" value="1">
+                                        <input type="hidden" name="product_id" id="product_id" value="<%= products[product]._id %>">
+                                        <input type="hidden" name="priceHidden" id="priceHidden" value="<%= products[product].price %>">
+
+                                        <% if(user){ %>
+                                        <div class="pull-left" style="padding: 10px 5px;">
+                                            <button type="submit" class="btn btn-primary btn-sm" style="margin-right: 1px;">ADD TO CART</button>
+                                        </div>
+                                        <% } else { %>
+                                        <a href="/login" class="btn btn-warning">Signin to make order</a>
+                                        <% } %>
+                                    </div>
+                                </div>
+                            </form>
+                            &lt;!&ndash;<div class="pricetext">£8.95</div>&ndash;&gt;
+                        </div>
+                    </a>
+                </div>-->
+

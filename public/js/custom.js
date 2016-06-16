@@ -31,7 +31,6 @@ $(function () {
     });*/
 
     $(document).on("click", "#addToCart", function (e) {
-        alert("im clicked");
         e.preventDefault();
         $.ajax({
             method: "POST",
@@ -42,7 +41,7 @@ $(function () {
             }
         });
     });
-
+    
     $(document).on("click", "#plus", function (e) {
         e.preventDefault();
 
@@ -66,11 +65,11 @@ $(function () {
     });
 
     $(".total").keyup(function (e) {
-        alert($(this).prev(".quantity").val());
+        //alert($(this).prev(".quantity").val());
         e.preventDefault();
         var quantity = parseInt($(this).val());
         $(this).prev(".quantity").val(quantity);
-        alert($(this).prev(".quantity").val());
+        //alert($(this).prev(".quantity").val());
     });
 
     function stripeResponseHandler(status, response) {
