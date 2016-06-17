@@ -3,12 +3,12 @@
 <div class="row">
     <% if(user && products.length > 0) { %>
     <div class="col s3" style="margin-top: 22px;">
-        <div class="card">
+        <div class="card" style="padding:0;">
            <div class="card-title" style="padding: 10px 0 0 0;">
-               <h5 style="padding: 5px 10px; border-bottom: 1px solid #eee;">Manufacturers</h5>
+               <h5 style="padding: 5px 10px; border-bottom: 1px solid #eee;font-size: 0.7em;">MANUFACTURERS</h5>
            </div>
-            <div class="card-content" style="box-shadow: none;">
-                <ul class="collapsible" data-collapsible="expandable" style="margin: 0 10px 5px 5px;box-shadow: none;">
+            <div class="card-content" style="box-shadow: none;padding: 0;">
+                <ul class="collapsible" data-collapsible="expandable" style="margin: 0 5px 2px 0;box-shadow: none;padding: 0;">
                     <li>
                         <div class="collapsible-header" style="background-color: #eee;"><i class="material-icons right" style="margin-right:0;">add</i>A - G (<%= manufacturerAG.length %>)</div>
                         <div class="collapsible-body">

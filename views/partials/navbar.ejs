@@ -98,7 +98,7 @@
                     </ul>
                 </div>
                 <div class="col s1 left" style="padding: 0;margin: 0;">
-                    <a class="btn navbarCart left" href="/cart">
+                    <a class="btn navbarCart left" href="/cart" id="cartBadge">
                         <img src="/img/Ecommerce-Shopping-Bag-icon.png"  id="cartImage" class="left">
                         <% if(cart > 0) { %>
                             <span style="float: left;margin: 20px 0 0 -5px;font-size: 1em;background-color: #eee; min-width: 30px; height: 35px;
@@ -123,7 +123,7 @@
                         <ul class="">
                             <% for(category in categories) { %>
                             <li class="navbarList">
-                                <a href="/products/<%= categories[category]._id %>" style="color: #000; font-weight: bold; font-size: 1.2em;">
+                                <a href="/products/<%= categories[category]._id %>" style="color: #000; font-weight: bold; font-size: 1.1em;">
                                     <%= categories[category].name %></a>
                             </li>
                             <% } %>

@@ -41,6 +41,17 @@ $(function () {
             }
         });
     });
+    $(document).on("click", ".homeAddToCart", function (e) {
+        e.preventDefault();
+        $.ajax({
+            method: "POST",
+            url: "/addToCart",
+            data: $(this).closest("form").serialize(),
+            success: function () {
+                $("#cartBadge").load(location.href + " #cartBadge>*","");
+            }
+        });
+    });
     
     $(document).on("click", "#plus", function (e) {
         e.preventDefault();
@@ -65,11 +76,9 @@ $(function () {
     });
 
     $(".total").keyup(function (e) {
-        //alert($(this).prev(".quantity").val());
         e.preventDefault();
         var quantity = parseInt($(this).val());
         $(this).prev(".quantity").val(quantity);
-        //alert($(this).prev(".quantity").val());
     });
 
     function stripeResponseHandler(status, response) {
