@@ -1,5 +1,5 @@
 body {
-    display: flex;
+    display: flex;font-family: 'Prompt','Oswald', serif;
     min-height: 100vh;
     flex-direction: column;
 }
@@ -35,7 +35,7 @@ nav{
     background-color: #333; height: 45px!important;
 }
 .homeAddToCart{
-    font-size: 10px;
+    font-size: 9px; box-shadow: none!important;
     font-weight:bold;
     width: 80px; height: 32px!important;
 }
@@ -66,5 +66,17 @@ nav{
 #cartImage{
      width: 50px;margin: 20px 0 0 0!important;padding:0!important;
  }
+.cartQuantity{
+    border: 1px solid #ddd!important; padding: 0!important; margin: 0!important; width: 40px!important; height: 30px!important;
+    text-align: center; box-shadow: none!important; vertical-align: middle!important;
+}
+.minusBtn, .plusBtn{
+    box-shadow: none!important; width: 30px!important;height: 32px!important; padding: 0!important; margin: 0!important;
+    padding-bottom: 12px!important; background-color: #4caf50!important;
+}
+.deleteBtn {
+    box-shadow: none!important; width: 30px!important;height: 32px!important; padding: 0!important; margin: 0 5px!important;
+    padding-bottom: 12px!important; background-color: transparent!important;
+}
 
 
