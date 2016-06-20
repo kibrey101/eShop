@@ -14,7 +14,7 @@
         <% if(foundCart.items.length == 0) { %>
         <h4 class="text-center" style="margin-top: 50px;text-decoration: none;">OOps! No items in cart: <a href="/" style="text-decoration: none;color:#00C853;">Go back to buy items</a></h4>
         <% } else { %>
-        <div class="col s12">
+        <div class="col s9">
             <table class="left bordered striped">
                 <thead >
                 <tr>
@@ -41,11 +41,15 @@
                         </div>
                     </td>
                     <td>
-                        <div class="row">
-                            <button type="button" class="btn btn-small minusBtn">-</button>
-                            <input type="search" name="quantity" class="cartQuantity" value="<%= foundCart.items[item].quantity %>">
-                            <button type="button"  class="btn btn-small plusBtn">+</button>
-                        </div>
+                        <form action="/updateCart" method="post">
+                            <input type="hidden" name="product_id" id="product_id" value="<%= foundCart.items[item].item._id %>">
+                            <div class="row">
+                                <button type="button" class="btn btn-small minusBtn">-</button>
+                                <input type="hidden" class="quantity" name="quantity" id="quantity" value="<%= foundCart.items[item].quantity %>">
+                                <input type="text" class="cartQuantity" value="<%= foundCart.items[item].quantity %>">
+                                <button type="button"  class="btn btn-small plusBtn">+</button>
+                            </div>
+                        </form>
                     </td>
                     <td>
                         <form action="/remove" method="post">

@@ -53,32 +53,60 @@ $(function () {
         });
     });
     
-    $(document).on("click", "#plus", function (e) {
+    $(document).on("click", ".plusBtn", function (e) {
         e.preventDefault();
 
-       var quantity = parseInt($("#quantity").val());
+       var quantity = parseInt($(this).siblings(".quantity").val());
         quantity += 1;
-        $("#quantity").val(quantity);
-        $("#total").val(quantity);
+        $(this).siblings(".quantity").val(quantity);
+        $(this).siblings(".cartQuantity").val(quantity);
+        $.ajax({
+            method: "POST",
+            url: "/updateCart",
+            data: $(this).closest("form").serialize(),
+            success: function () {
+                $("#cartBadge").load(location.href + " #cartBadge>*","");
+            }
+        });
     });
 
-    $(document).on("click", "#minus", function (e) {
+    $(document).on("click", ".minusBtn", function (e) {
         e.preventDefault();
-
-        var quantity = parseInt($("#quantity").val());
+        var quantity = parseInt($(this).siblings(".quantity").val());
 
         if(quantity > 1) {
             quantity -= 1;
-            $("#quantity").val(quantity);
-            $("#total").val(quantity);
+            $(this).siblings(".quantity").val(quantity);
+            $(this).siblings(".cartQuantity").val(quantity);
+            $.ajax({
+                method: "POST",
+                url: "/updateCart",
+                data: $(this).closest("form").serialize(),
+                success: function () {
+                    $("#cartBadge").load(location.href + " #cartBadge>*","");
+                }
+            });
         }
 
     });
 
-    $(".total").keyup(function (e) {
+    $(".homeCartQuantity").keyup(function (e) {
         e.preventDefault();
         var quantity = parseInt($(this).val());
         $(this).prev(".quantity").val(quantity);
+    });
+    $(".cartQuantity").keyup(function (e) {
+        e.preventDefault();
+        var quantity = parseInt($(this).val());
+        $(this).prev(".quantity").val(quantity);
+        $.ajax({
+            method: "POST",
+            url: "/updateCart",
+            data: $(this).closest("form").serialize(),
+            success: function () {
+                $("#cartBadge").load(location.href + " #cartBadge>*","");
+            }
+        });
     });
 
     function stripeResponseHandler(status, response) {

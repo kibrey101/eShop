@@ -63,7 +63,7 @@
                     <h6 class="productCategory"><%= products[product].category.name %></h6>
                     <h6 class="productName"><%= products[product].name %></h6>
                 </div>
-                <div class="card-action" style="padding: 0 6px;">
+                <div class="card-action" style="padding: 6px;">
                     <form action="/addToCart" method="post">
                         <div class="row" style="margin: 20px 0 0 0;">
 
@@ -72,7 +72,7 @@
                                 <% if(user){ %>
                                         <div class="col s2" style="padding: 0;">
                                             <input type="hidden" class="quantity" name="quantity" id="quantity" value="1">
-                                            <input placeholder="Qty" id="total" type="text" class="validate s6 total"
+                                            <input placeholder="Qty" type="text" class="validate s6 homeCartQuantity"
                                                    style="font-size: 12px;border: 1px solid #ccc; padding-left: 6px; height: 30px;border-radius: 1px;box-shadow: none;">
                                         </div>
                                         <div class="col s7">

@@ -177,6 +177,23 @@ exports.addToCart = function (req, res, next) {
     });
 };
 
+exports.updateCart = function (req, res, next) {
+    Cart.findOne({ owner: req.user._id}, function (err, cart) {
+        if(err) return next(err);
+
+        for(var i = 0; i < cart.items.length; i++){
+            if(cart.items[i].item == req.body.product_id){
+                cart.items[i].quantity = parseInt(req.body.quantity);
+                cart.save(function (err) {
+                    if(err) return next(err);
+                    req.flash("cartUpdateMessage", "Cart updated");
+                    var backURL=req.header('Referer') || '/';
+                    return res.redirect(backURL);
+                });
+            }
+        }
+    });
+};
 exports.renderCart = function (req, res, next) {
     Cart.findOne({owner: req.user._id})
         .populate("items.item")
