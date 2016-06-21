@@ -1,4 +1,47 @@
 <% layout("layout") %>
+<div class="container" style="margin-top: 50px;">
+    <div class="row">
+        <div class="col s4">
+            <div class="card">
+                <div class="card-image">
+                    <img src="/img/iphone.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="col s7" style="padding-left: 20px;">
+            <div class="row" style="margin-bottom: 5px; border-bottom: 1px solid #eee;">
+                <h4 style="font-weight: bold;"><%= product.name %></h4>
+            </div>
+            <div class="row" style="border-bottom: 1px solid #eee;">
+                <div class="col s4" style="padding: 10px 0;">
+                    <h5 style=" padding: 0; margin: 0;"><%= product.category.name %></h5>
+                    <h6 style=""><%= product.manufacturer %></h6>
+                </div>
+            </div>
+            <div class="row" style="padding: 0;">
+                <div class="col s6">
+                    <form action="/addToCart" method="post" id="productForm">
+                        <input type="hidden" name="product_id" id="product_id" value="<%= product._id %>">
+                        <div class="row">
+                            <button type="button" class="btn btn-small productMinusBtn">-</button>
+                            <input type="hidden" class="quantity" name="quantity" id="quantity" value="1">
+                            <input type="text" class="productQuantity" value="1" placeholder="Qty">
+                            <button type="button"  class="btn btn-small productPlusBtn">+</button>
+                            <button type="submit" class="btn homeAddToCart"
+                                    style=" margin-left:20px;padding-left: 5px; padding-right: 5px;background-color: #4caf50;">ADD TO CART</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card-panel" style="box-shadow: none; border: 1px solid #eee;">
+                    <span><%= product.description %></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--
 <div class="container">
     <div >
         <div>
@@ -47,4 +90,4 @@
             </div>
         </div>
     </div>
-</div>
+</div>-->

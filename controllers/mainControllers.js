@@ -140,7 +140,7 @@ exports.addToCart = function (req, res, next) {
             for(var i = 0; i < cart.items.length; i++){
                 if(cart.items[i].item == req.body.product_id){
                     cart.items[i].quantity += parseInt(req.body.quantity);
-                    cart.items[i].price += parseFloat(req.body.priceHidden * req.body.quantity);
+                    //cart.items[i].price += parseFloat(req.body.priceHidden * req.body.quantity);
                     //cart.total += parseFloat(req.body.priceHidden).toFixed(2);
                     itemExists = true;
                     cart.save(function (err) {
@@ -157,8 +157,7 @@ exports.addToCart = function (req, res, next) {
         if(cart.items.length == 0 || !itemExists){
             cart.items.push({
                 item: req.body.product_id,
-                quantity: parseInt(req.body.quantity),
-                price: parseFloat(req.body.priceHidden * req.body.quantity)
+                quantity: parseInt(req.body.quantity)
             });
 
             //cart.total += parseFloat(req.body.priceHidden).toFixed(2);

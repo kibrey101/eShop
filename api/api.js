@@ -46,5 +46,3 @@ router.route("/search").post( function (req, res, next) {
         res.json(results);
     }) ;
 });
-
-router.route("/:category/:")

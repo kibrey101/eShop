@@ -1,5 +1,5 @@
 <% layout("layout") -%>
-<div class="row">
+<div class="container" style="min-height: 600px;">
     <div class="row">
         <% if (removeMessage.length > 0) { %>
         <div class="alert alert-success alert-dismissible">
@@ -10,12 +10,12 @@
         </div>
         <% } %>
     </div>
-    <div class="row">
+    <div class="row" style="margin-top: 100px;">
         <% if(foundCart.items.length == 0) { %>
         <h4 class="text-center" style="margin-top: 50px;text-decoration: none;">OOps! No items in cart: <a href="/" style="text-decoration: none;color:#00C853;">Go back to buy items</a></h4>
         <% } else { %>
         <div class="col s9">
-            <table class="left bordered striped">
+            <table class="left bordered">
                 <thead >
                 <tr>
                     <th class="left">Product</th>
@@ -32,7 +32,7 @@
                         </div>
                         <div class="col s4">
                             <div class="row" style="margin: 0;">
-                                <a class="list-group-item-heading" href="product/<%= foundCart.items[item].item._id %>" style="color: #4caf50;
+                                <a class="list-group-item-heading" href="product/<%= foundCart.items[item].item._id %>" style="color: #333; font-weight: bold;
                                 font-size: 1.2em;"><%= foundCart.items[item].item.name %></a>
                             </div>
                             <div class="row" style="margin: 0;">
@@ -55,7 +55,7 @@
                         <form action="/remove" method="post">
                             <div class="row">
                                 <input type="hidden" name="item" value="<%= foundCart.items[item]._id %>">
-                                <button type="submit" class="btn deleteBtn"><i class="material-icons" style="color:red;font-size: 2em;">delete</i></button>
+                                <button type="submit" class="btn deleteBtn"><i class="material-icons" style="color:#ccc;font-size: 2em;">delete</i></button>
                             </div>
                         </form>
                     </td>
@@ -63,72 +63,20 @@
                 <% } %>
                 </tbody>
             </table>
-           <!-- <ul class="collection">
-                <% for(var item in foundCart.items) { %>
-                <li class="collection-item avatar">
-                    <img src="/img/iphone.jpg" alt="" class="circle">
-                    <span class="title">Title</span>
-                    <p>First Line <br>
-                        Second Line
-                    </p>
-                    <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-                </li>
-                <% } %>
-            </ul>-->
         </div>
-        <% } %>
-    </div>
-</div>
-<!--
-<% layout("layout") -%>
-<% if (removeMessage.length > 0) { %>
-<div class="alert alert-success alert-dismissible">
-    <button type="button" class="close" data-dismiss="alert" aria-label="close">
-        <span aria-hidden="true">&times;</span>
-    </button>
-    <%= removeMessage %>
-</div>
-<% } %>
-<div class="row">
-    <% if(foundCart.items.length == 0) { %>
-    <h3 class="text-center" style="margin-top: 50px;text-decoration: none;">OOps! No items in cart: <a href="/" style="text-decoration: none;color:darkgreen;">Go back to buy items</a></h3>
-    <% } else { %>
-    <div class="col s6">
-        <% for(var item in foundCart.items) { %>
-        <div class="list-group">
-            <div class="list-group-item">
-                            <span class="row">
-                                <div class="col s2">
-                                    <span><img src="/img/iphone.jpg" alt=""
-                                               class="product-image responsive"></span>
-                                </div>
-                                <div class="col-md-4">
-                                    <h3>
-                                        <a class="list-group-item-heading" href="product/<%= foundCart.items[item].item._id %>"><%= foundCart.items[item].item.name %></a>
-                                    </h3>
-                                </div>
-                                <div class="col-md-3">
-                                    <p>Quantity: <%= foundCart.items[item].quantity %></p>
-                                    <div class="btn-group" role="group" aria-label="..." >
-                                        <button type="button" id="minus" class="btn btn-default">-</button>
-                                        <button type="button" id="total" class="btn btn-default">1</button>
-                                        <button type="button" id="plus" class="plus btn btn-default">+</button>
-                                    </div>
-
-                                </div>
-                                <div class="col-sm-1 col-md-1">
-                                    <form action="/remove" method="post">
-                                        <div class="form-group">
-                                            <input type="hidden" name="item" value="<%= foundCart.items[item]._id %>">
-                                            <button type="submit" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </span>
+        <div class="col s3">
+            <div class="card" style="box-shadow: none; border: 1px dashed #ccc; padding: 5px; margin-top: 50px;">
+                <div class="card-header" style="border-bottom: 1px solid #eee;">
+                    <h5>Cart summary</h5>
+                </div>
+                <div class="card-content">
+                    <h6>Total: <span class="cartSummary" value="<%= cart %>" style="font-weight: bold;"></span> items</h6>
+                </div>
+                <div class="card-action" style="padding: 10px;width: 100%;">
+                    <a href="#" class="btn green">Proceed to check out</a>
+                </div>
             </div>
         </div>
         <% } %>
     </div>
-    <% } %>
 </div>
--->
