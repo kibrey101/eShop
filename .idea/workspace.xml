@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53b1bf2d-138c-42a8-b62a-ff4e2f17fcf2" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/img/keyboard_arrow_down.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/api.js" afterPath="$PROJECT_DIR$/api/api.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/mainControllers.js" afterPath="$PROJECT_DIR$/controllers/mainControllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/custom.css" afterPath="$PROJECT_DIR$/public/css/custom.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/custom.js" afterPath="$PROJECT_DIR$/public/js/custom.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/layout.ejs" afterPath="$PROJECT_DIR$/views/layout.ejs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/main/cart.ejs" afterPath="$PROJECT_DIR$/views/main/cart.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/main/category.ejs" afterPath="$PROJECT_DIR$/views/main/category.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/main/product-main.ejs" afterPath="$PROJECT_DIR$/views/main/product-main.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/main/product.ejs" afterPath="$PROJECT_DIR$/views/main/product.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/main/search-result.ejs" afterPath="$PROJECT_DIR$/views/main/search-result.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/partials/navbar.ejs" afterPath="$PROJECT_DIR$/views/partials/navbar.ejs" />
     </list>
     <ignored path="eshop.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -53,8 +42,8 @@
       <file leaf-file-name="cart.ejs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/main/cart.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="75" column="30" selection-start-line="75" selection-start-column="30" selection-end-line="75" selection-end-column="30" />
+            <state relative-caret-position="282">
+              <caret line="75" column="103" selection-start-line="75" selection-start-column="103" selection-end-line="75" selection-end-column="103" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -64,6 +53,8 @@
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#h6#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#i#0;n#a#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -99,9 +90,10 @@
       <file leaf-file-name="navbar.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/partials/navbar.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-432">
-              <caret line="67" column="66" selection-start-line="67" selection-start-column="66" selection-end-line="67" selection-end-column="66" />
+            <state relative-caret-position="197">
+              <caret line="89" column="142" selection-start-line="88" selection-start-column="44" selection-end-line="89" selection-end-column="142" />
               <folding>
+                <element signature="n#style#0;n#a#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#1;n#nav#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#nav#0;n#!!top" expanded="true" />
                 <marker date="1466473426146" expanded="false" signature="243:271" ph="..." />
                 <marker date="1466473426146" expanded="false" signature="664:676" ph="..." />
@@ -606,12 +598,12 @@
       <workItem from="1465940420396" duration="12423000" />
       <workItem from="1466022893287" duration="27355000" />
       <workItem from="1466188034979" duration="8221000" />
-      <workItem from="1466249698123" duration="37462000" />
+      <workItem from="1466249698123" duration="38667000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="416791000" />
+    <option name="totallyTimeSpent" value="417996000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -974,24 +966,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/partials/navbar.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-432">
-          <caret line="67" column="66" selection-start-line="67" selection-start-column="66" selection-end-line="67" selection-end-column="66" />
-          <folding>
-            <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#nav#0;n#!!top" expanded="true" />
-            <marker date="1466473426146" expanded="false" signature="243:271" ph="..." />
-            <marker date="1466473426146" expanded="false" signature="664:676" ph="..." />
-            <marker date="1466473426146" expanded="false" signature="823:862" ph="..." />
-            <marker date="1466473426146" expanded="false" signature="1381:1404" ph="..." />
-            <marker date="1466473426146" expanded="false" signature="1472:1495" ph="..." />
-            <marker date="1466473426146" expanded="false" signature="1626:1638" ph="..." />
-            <marker date="1466473426146" expanded="false" signature="2272:2288" ph="..." />
-            <marker date="1466473426146" expanded="false" signature="2499:2548" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/secret.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -1073,10 +1047,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/views/partials/navbar.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="89" column="142" selection-start-line="88" selection-start-column="44" selection-end-line="89" selection-end-column="142" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#1;n#nav#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#nav#0;n#!!top" expanded="true" />
+            <marker date="1466473426146" expanded="false" signature="243:271" ph="..." />
+            <marker date="1466473426146" expanded="false" signature="664:676" ph="..." />
+            <marker date="1466473426146" expanded="false" signature="823:862" ph="..." />
+            <marker date="1466473426146" expanded="false" signature="1381:1404" ph="..." />
+            <marker date="1466473426146" expanded="false" signature="1472:1495" ph="..." />
+            <marker date="1466473426146" expanded="false" signature="1626:1638" ph="..." />
+            <marker date="1466473426146" expanded="false" signature="2272:2288" ph="..." />
+            <marker date="1466473426146" expanded="false" signature="2499:2548" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/views/main/cart.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="75" column="30" selection-start-line="75" selection-start-column="30" selection-end-line="75" selection-end-column="30" />
+        <state relative-caret-position="282">
+          <caret line="75" column="103" selection-start-line="75" selection-start-column="103" selection-end-line="75" selection-end-column="103" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -1086,6 +1079,8 @@
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#h6#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
