@@ -72,7 +72,7 @@ nav{
 }
 .minusBtn, .plusBtn{
     box-shadow: none!important; width: 30px!important;height: 32px!important; padding: 0!important; margin: 0!important;
-    padding-bottom: 12px!important; background-color: #eee!important;
+    padding-bottom: 12px!important; background-color: #ddd!important;
     color: #000000 !important;
 }
 .deleteBtn {
@@ -82,7 +82,15 @@ nav{
 
 .productMinusBtn, .productPlusBtn{
     box-shadow: none!important; width: 30px!important;height: 32px!important; padding: 0!important; margin: 0!important;
-    padding-bottom: 12px!important; background-color: #eee!important; color: #000000 !important;
+    padding-bottom: 12px!important; background-color: #ddd!important; color: #000000 !important;
+}
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Material Icons'),
+    local('fonts/MaterialIcons-Regular')
 }
 
 
