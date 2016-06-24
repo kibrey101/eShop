@@ -1,5 +1,11 @@
 $(function () {
-    $(".shippingForm").hide();
+    if($("#anotherRadio").is(":checked")){
+        $("#proSendOrderButton").hide();
+        $(".shippingForm").show("slow");
+    } else {
+        $(".shippingForm").hide();
+    }
+
     $('select').material_select();
      function cartSum() {
         var total = 0;
