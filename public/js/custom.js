@@ -1,4 +1,6 @@
 $(function () {
+    $(".shippingForm").hide();
+    $('select').material_select();
      function cartSum() {
         var total = 0;
         $(".cartQuantity").each(function () {
@@ -32,7 +34,14 @@ $(function () {
             }
         });
     });
-
+    $(document).on("click", "#profileRadio", function () {
+        $(".shippingForm").hide("slow");
+        $("#proSendOrderButton").show("slow");
+    });
+    $(document).on("click", "#anotherRadio", function () {
+        $(".shippingForm").show("slow");
+        $("#proSendOrderButton").hide("slow");
+    });
     $(document).on("click", ".homeAddToCart", function (e) {
         e.preventDefault();
         $.ajax({

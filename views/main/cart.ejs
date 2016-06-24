@@ -30,12 +30,12 @@
                         <div class="col s2">
                             <img src="/img/iphone.jpg" alt=""style="width:80px;">
                         </div>
-                        <div class="col s4">
-                            <div class="row" style="margin: 0;">
+                        <div class="col s8">
+                            <div class="row" style="margin: 3px;">
                                 <a class="list-group-item-heading" href="product/<%= foundCart.items[item].item._id %>" style="color: #333; font-weight: bold;
                                 font-size: 1.2em;"><%= foundCart.items[item].item.name %></a>
                             </div>
-                            <div class="row" style="margin: 0;">
+                            <div class="row" style="margin: 3px;">
                                 <%= foundCart.items[item].item.manufacturer %>
                             </div>
                         </div>
@@ -73,7 +73,7 @@
                     <h6>Total: <span class="cartSummary" value="<%= cart %>" style="font-weight: bold;"></span> items</h6>
                 </div>
                 <div class="card-action" style="padding: 5px;width: 100%;margin:0;">
-                    <a href="#" class="btn" style="font-size: 0.8em;background-color: #ddd; color:#000;">Check out<i class="material-icons right"
+                    <a href="/checkout" class="btn" style="font-size: 0.8em;background-color: #ddd; color:#000;">Check out<i class="material-icons right"
                                                                          style="width: 10px;height: 10px;">keyboard_arrow_right</i></a>
                 </div>
             </div>

@@ -219,6 +219,15 @@ exports.remove = function (req, res, next) {
     });
 };
 
+exports.renderCheckout = function (req, res, next) {
+    Cart.findOne({owner: req.user._id})
+        .populate("items.item")
+        .populate("category")
+        .exec(function (err, userCart) {
+            if(err) return next(err);
+            res.render("main/checkout", {foundCart: userCart,removeMessage: req.flash("remove")});
+        });
+};
 exports.payment = function (req, res, next) {
    var stripeToken = req.body.stripeToken;
     var currentCharges = Math.round(req.body.stripeMoney * 100);

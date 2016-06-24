@@ -1,0 +1,94 @@
+<% layout("layout") -%>
+<div class="container" style="min-height: 600px;">
+    <div class="row">
+        <div class="col s12" style="margin-top: 30px;">
+            <h4 class="header">Cart summary</h4>
+            <table class="left bordered striped" style="border: 1px solid #eee;">
+                <thead>
+                <tr>
+                    <th class="left">Product</th>
+                    <th class="">Quantity</th>
+                </tr>
+                </thead>
+                <tbody>
+                <% for(var item in foundCart.items) { %>
+                <tr>
+                    <td style="padding: 5px;">
+
+                        <a class="list-group-item-heading" href="product/<%= foundCart.items[item].item._id %>" style="color: #333;
+                                font-size: 1.2em;"><%= foundCart.items[item].item.name %></a>
+                    </td>
+                    <td style="padding:5px;">
+                        <h5 class="left" style="margin-left: 20px;padding: 0; text-align: center;font-size: 1.1em;"><%= foundCart.items[item].quantity %></h5>
+                    </td>
+                </tr>
+                <% } %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 30px;">
+        <div class="col s12">
+            <h4>Shipping address </h4>
+            <div class="col s12">
+                <p>
+                    <input name="shippingRadio" type="radio" id="profileRadio" checked />
+                    <label for="profileRadio">Use shipping address from profile</label>
+                </p>
+                <div class="col s12" id="proSendOrderButton">
+                    <button class="btn">Send Order</button>
+                </div>
+            </div>
+            <div class="col s12" style="margin-top: 30px;">
+                <p>
+                    <input name="shippingRadio" type="radio" id="anotherRadio" />
+                    <label for="anotherRadio">Use other shipping address</label>
+                </p>
+            </div>
+            <div class="col s12 shippingForm" style="padding: 15px; border: 1px dashed #ddd;">
+
+                <form action="/sendOrder" method="post">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input id="street" name="street" type="text" class="validate">
+                            <label for="street">Street:</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="zipCode" name="zipCode" type="text" class="validate">
+                            <label for="zipCode">Zip Code:</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input id="city" name="city" type="text" class="validate">
+                            <label for="city">City:</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="port" name="port" type="text" class="validate">
+                            <label for="port">Port:</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <select name="shippingMethod" id="shippingMethod">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">Normal</option>
+                                <option value="2">Express</option>
+                                <option value="3">Deluxe</option>
+                            </select>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="country" name="country" type="text" class="validate">
+                            <label for="port">Country:</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <button type="submit" class="btn">Send Order</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

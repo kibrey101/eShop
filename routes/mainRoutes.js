@@ -18,4 +18,5 @@ router.route("/addToCart").post(main.addToCart);
 router.route("/updateCart").post(main.updateCart);
 router.route("/cart").get(main.renderCart);
 router.route("/remove").post(main.remove);
+router.route("/checkout").get(main.renderCheckout);
 router.route("/payment").post(main.payment);
