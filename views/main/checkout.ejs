@@ -33,58 +33,57 @@
             <div class="col s12">
                 <p>
                     <input name="shippingRadio" type="radio" id="profileRadio" checked />
-                    <label for="profileRadio">Use shipping address from profile</label>
+                    <label for="profileRadio" style="color: #000;">Use shipping address from profile</label>
                 </p>
-                <div class="col s12" id="proSendOrderButton">
-                    <button class="btn">Send Order</button>
+                <div class="col s12" id="proSendOrderButton" style="color: #000;">
+                    <button class="btn btnSendOrder">Send Order</button>
                 </div>
             </div>
             <div class="col s12" style="margin-top: 30px;">
                 <p>
-                    <input name="shippingRadio" type="radio" id="anotherRadio" />
-                    <label for="anotherRadio">Use other shipping address</label>
+                    <input name="shippingRadio" type="radio" id="anotherRadio" / style="color: #000;">
+                    <label for="anotherRadio" style="color: #000;">Use other shipping address</label>
                 </p>
             </div>
             <div class="col s12 shippingForm" style="padding: 15px; border: 1px dashed #ddd;">
-
                 <form action="/sendOrder" method="post">
                     <div class="row">
                         <div class="input-field col s6">
-                            <input id="street" name="street" type="text" class="validate">
-                            <label for="street">Street:</label>
+                            <input id="street" name="street" type="text" class="validate shippingInput">
+                            <label for="street" class="shippingLabel">Street</label>
                         </div>
                         <div class="input-field col s6">
-                            <input id="zipCode" name="zipCode" type="text" class="validate">
-                            <label for="zipCode">Zip Code:</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s6">
-                            <input id="city" name="city" type="text" class="validate">
-                            <label for="city">City:</label>
-                        </div>
-                        <div class="input-field col s6">
-                            <input id="port" name="port" type="text" class="validate">
-                            <label for="port">Port:</label>
+                            <input id="zipCode" name="zipCode" type="text" class="validate shippingInput">
+                            <label for="zipCode" class="shippingLabel">Zip Code</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s6">
-                            <select name="shippingMethod" id="shippingMethod">
+                            <input id="city" name="city" type="text" class="validate shippingInput">
+                            <label for="city" class="shippingLabel">City</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="port" name="port" type="text" class="validate shippingInput">
+                            <label for="port" class="shippingLabel">Port</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <select name="shippingMethod" id="shippingMethod" style="color:#000;">
                                 <option value="" disabled selected>Choose your option</option>
-                                <option value="1">Normal</option>
-                                <option value="2">Express</option>
-                                <option value="3">Deluxe</option>
+                                <option value="1" style="color:#000;">Normal</option>
+                                <option value="2" style="color:#000;">Express</option>
+                                <option value="3" style="color:#000;">Deluxe</option>
                             </select>
                         </div>
                         <div class="input-field col s6">
-                            <input id="country" name="country" type="text" class="validate">
-                            <label for="port">Country:</label>
+                            <input id="country" name="country" type="text" class="validate shippingInput">
+                            <label for="port" class="shippingLabel">Country</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s6">
-                            <button type="submit" class="btn">Send Order</button>
+                            <button type="submit" class="btn btnSendOrder">Send Order</button>
                         </div>
                     </div>
                 </form>

@@ -1,5 +1,5 @@
 body {
-    display: flex;font-family: 'Prompt','Oswald', serif;
+    display: flex;font-family: 'Helvetica',serif;
     min-height: 100vh;
     flex-direction: column;
 }
@@ -85,12 +85,20 @@ nav{
     padding-bottom: 12px!important; background-color: #ddd!important; color: #000000 !important;
 }
 
-@font-face {
-    font-family: 'Material Icons';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Material Icons'),
-    local('fonts/MaterialIcons-Regular')
+.shippingInput{
+    box-shadow: none!important; border:1px solid #eee!important;padding: 0!important;
+}
+.shippingLabel {
+    padding-left: 5px!important; padding-bottom: 3px!important;
+    color: #000000 !important;
+}
+.btnSendOrder{
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
+     color: #000!important;
+    font-weight:bold; background-color: #ddd!important;
+}
+.select-wrapper input.select-dropdown{
+    border:1px solid #eee!important;padding-left: 5px!important;
 }
 
 
