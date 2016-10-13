@@ -1,4 +1,15 @@
 $(function () {
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        parallax: true,
+        loop: true,
+        speed: 2000,
+        autoplay: 1500,
+        autoplayDisableOnInteraction: false
+    });
     if($("#anotherRadio").is(":checked")){
         $("#proSendOrderButton").hide();
         $(".shippingForm").show("slow");

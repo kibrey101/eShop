@@ -228,6 +228,9 @@ exports.renderCheckout = function (req, res, next) {
             res.render("main/checkout", {foundCart: userCart,removeMessage: req.flash("remove")});
         });
 };
+exports.sendOrder = function (req, res, next) {
+    
+};
 exports.payment = function (req, res, next) {
    var stripeToken = req.body.stripeToken;
     var currentCharges = Math.round(req.body.stripeMoney * 100);

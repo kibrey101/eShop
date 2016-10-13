@@ -36,7 +36,10 @@
                     <label for="profileRadio" style="color: #000;">Use shipping address from profile</label>
                 </p>
                 <div class="col s12" id="proSendOrderButton" style="color: #000;">
-                    <button class="btn btnSendOrder">Send Order</button>
+                    <form action="/sendOrder" method="post">
+                        <input type="hidden" name="profileAddress" value="profileAddress">
+                        <button class="btn btnSendOrder" type="submit">Send Order</button>
+                    </form>
                 </div>
             </div>
             <div class="col s12" style="margin-top: 30px;">
@@ -70,7 +73,7 @@
                     <div class="row">
                         <div class="input-field col s6">
                             <select name="shippingMethod" id="shippingMethod" style="color:#000;">
-                                <option value="" disabled selected>Choose your option</option>
+                                <option value="" disabled selected>Shipping method</option>
                                 <option value="1" style="color:#000;">Normal</option>
                                 <option value="2" style="color:#000;">Express</option>
                                 <option value="3" style="color:#000;">Deluxe</option>
