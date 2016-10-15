@@ -3,7 +3,7 @@
 <div class="container">
     <div class="row">
         <% if(user && products.length > 0) { %>
-        <div class="col s3" style="margin-top: 22px;">
+        <div class="col s12 m3" style="margin-top: 22px;">
             <div class="card" style="padding:0;">
                 <div class="card-title" style="padding: 10px 0 0 0;">
                     <h5 style="padding: 5px 10px; border-bottom: 1px solid #eee;font-size: 0.7em;">MANUFACTURERS</h5>
@@ -156,9 +156,9 @@
 
         </div>
         <% } %>
-        <div class="col s9" style="margin-top: 20px;">
+        <div class="col s12 m9" style="margin-top: 20px;">
             <% for(var product in products) { %>
-            <div class="col s12 m6 l4">
+            <div class="col s6 m4">
                 <div class="card">
                     <div class="card-image waves-effect waves-block waves-light activator">
                         <a href="/product/<%= products[product]._id %>">
