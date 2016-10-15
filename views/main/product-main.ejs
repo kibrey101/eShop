@@ -48,40 +48,6 @@
         </div>
         <% } %>
     </div>
-    <!--<div class="row">
-    <% for(var product in products) { %>
-    <div class="col s3 m3 productbox">
-        <a href="/product/<%= products[product]._id %>" style="text-decoration: none; color:#000;">
-            <img src="<%= products[product].image %>" class="img-responsive">
-            <div class="producttitle">
-                <p><%= products[product].category.name %></p>
-                <h4><%= products[product].name %></h4>
-            </div>
-            <div class="productprice">
-                <form action="/addToCart" method="post" id="<%= products[product]._id %>">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <input type="hidden" class="form-control" name="quantity" value="1">
-                            <input type="hidden" name="product_id" id="product_id" value="<%= products[product]._id %>">
-                            <input type="hidden" name="priceHidden" id="priceHidden" value="<%= products[product].price %>">
-
-                            <% if(user){ %>
-                            <div class="pull-right" style="padding: 10px 5px;">
-                                <button type="submit" class="btn btn-primary btn-sm homeSubmit" style="margin-right: 1px;">ADD TO CART</button>
-                            </div>
-                            <% } else { %>
-                            <a href="/login" class="btn btn-warning">Signin to make order</a>
-                            <% } %>
-                        </div>
-                    </div>
-                </form>
-                &lt;!&ndash;<div class="pricetext">£8.95</div>&ndash;&gt;
-            </div>
-        </a>
-    </div>
-    <% } %>
-
-</div>-->
     <div class="row">
         <% for(var product in products) { %>
         <div class="col s12 m6 l3">
@@ -102,7 +68,6 @@
 
                             <input type="hidden" name="product_id" id="product_id" value="<%= products[product]._id %>">
                             <input type="hidden" name="priceHidden" id="priceHidden" value="<%= products[product].price %>">
-                            <% if(user){ %>
                             <div class="col s2" style="padding: 0;">
                                 <input type="hidden" class="quantity" name="quantity" id="quantity" value="1">
                                 <input placeholder="Qty" type="text" class="validate s6 homeCartQuantity"
@@ -112,10 +77,6 @@
                                 <button type="submit" class="btn  homeAddToCart"
                                         style="padding-left: 5px; padding-right: 5px;background-color: #ddd;color:#000;">ADD TO CART</button>
                             </div>
-
-                            <% } else { %>
-                            <a href="/login" class="btn btn-warning">Signin to make order</a>
-                            <% } %>
                         </div>
                     </form>
                 </div>

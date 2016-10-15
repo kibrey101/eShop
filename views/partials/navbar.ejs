@@ -1,71 +1,12 @@
-<!--
-<nav class="navbar navbar-default">
-    <div class="container">
-        <div class="row brandRow">
-            <div class="col-xs-5">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="/" style="color: #000; font-size: 2em;">E-CATALOG</a>
-                </div>
-            </div>
-            <% if(user) { %>
-            <div class="col-xs-3">
-                <form action="/search" method="post" class="navbar-form">
-                    <div>
-                        <div class="input-group navbarSearch">
-                            <input type="text" name="q" class="form-control" placeholder="Search..." style="width: 100%;">
-                            <span class="input-group-btn">
-                                <button type="submit" class="btn btn-inverse" style="height: 40px;background-color: #EBEFF0;">
-                                    <i class="glyphicon glyphicon-search" ></i></button>
-                            </span>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="col-xs-3 navbarProfile">
-                <a href="#" class="dropdown-toggle navbar-text pull-right navbarProfile" data-toggle="dropdown"><%= user.fullName %></a>
-                <ul class="dropdown-menu pull-right">
-                    <li><a href="/profile" style="background-color: #fff;">Profile</a></li>
-                    <li><a href="/logout" style="background-color: #fff;">Logout</a></li>
-                </ul>
-            </div>
-            <div class="navbar-right navbarCart" id="navbarCart" style="width: 30px;">
-                <a href="/cart" class="btn btn-default pull-right" id="cartBadge">
-                    <img src="/img/Shopping_Cart-50.png"  id="cartImage" style="width: 40px;margin-right: 5px;">
-                    <span class="badge text-center"><%= cart %></span>
-                </a>
-            </div>
-            <% }  else { %>
-                <div class="col-xs-1 navbar-right">
-                    <a href="/login" class="navbar-text navbarLogin">Login</a>
-                </div>
-            <% } %>
-        </div>
-        <% if(user){ %>
-        <div class="container">
-            <div class="row navbarCategory" style="padding: 10px 0;">
-                <ul class="nav navbar-nav">
-                    <% for(category in categories) { %>
-                    <li>
-                        <a href="/products/<%= categories[category]._id %>" style="color: #000; font-weight: bold; font-size: 1.2em;">
-                            <%= categories[category].name %></a>
-                    </li>
-                    <% } %>
-                </ul>
-            </div>
-        </div>
-        <% } %>
-    </div>
-</nav>
--->
 <nav >
     <div class="nav-wrapper topBar center">
-        bar for language and stuff
+        bar for language and currency conversion
     </div>
     <div class="nav-wrapper mainBar">
         <div class="container">
             <div class="row" style="margin-top: 20px;">
                 <div class="col s3" style="margin-top: 10px;">
-                    <h4><a href="/" class="" style="color: #C39738;font-weight: bold; ">E-CATALOG</a></h4>
+                    <h4><a href="/" class="" style="color: #C39738;font-weight: bold; ">EastAfro Shop</a></h4>
                 </div>
                 <% if(user) { %>
                 <div class="col s4 offset-m1">

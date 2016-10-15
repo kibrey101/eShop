@@ -79,7 +79,7 @@ exports.renderProfile = function (req, res, next) {
 
 exports.logout = function (req, res) {
    req.logOut();
-    return res.redirect("/login");
+    return res.redirect("/");
 };
 
 exports.renderEdit = function (req, res) {

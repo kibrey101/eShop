@@ -24,11 +24,7 @@ function paginate(req, res, next) {
 }
 
 exports.renderHome = function (req, res, next) {
-   if (req.user){
-       paginate(req, res, next);
-   } else {
-       res.render("main/home");
-   }
+    paginate(req, res, next);
 };
 
 exports.renderAbout = function (req, res, next) {
