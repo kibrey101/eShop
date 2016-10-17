@@ -43,7 +43,7 @@ nav{
 .homeAddToCart, .productAddToCart{
     font-size: 9px; box-shadow: 0 1px 1px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
     font-weight:bold;
-    width: 80px; height: 32px!important;
+    width: 100px; height: 32px!important;
 }
 .productCategory{font-size:10px;}
 .productName{
