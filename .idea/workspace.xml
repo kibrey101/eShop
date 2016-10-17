@@ -37,14 +37,24 @@
       <file leaf-file-name="product-main.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/main/product-main.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="72" column="32" selection-start-line="72" selection-start-column="32" selection-end-line="72" selection-end-column="113" />
+            <state relative-caret-position="113">
+              <caret line="66" column="86" selection-start-line="66" selection-start-column="86" selection-end-line="66" selection-end-column="86" />
               <folding>
                 <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#form#0;n#div#2;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#div#2;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h6#0;n#div#0;n#div#0;n#form#0;n#div#2;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#form#0;n#div#2;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="custom.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/css/custom.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="63" selection-start-line="15" selection-start-column="63" selection-end-line="15" selection-end-column="63" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -82,11 +92,12 @@
       <file leaf-file-name="category.ejs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/main/category.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="174" column="91" selection-start-line="174" selection-start-column="91" selection-end-line="174" selection-end-column="91" />
+            <state relative-caret-position="187">
+              <caret line="177" column="52" selection-start-line="177" selection-start-column="52" selection-end-line="177" selection-end-column="52" />
               <folding>
                 <element signature="e#4212#9713#0#HTML" expanded="false" />
                 <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#form#0;n#div#2;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#div#2;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h6#0;n#div#0;n#div#0;n#form#0;n#div#2;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -109,16 +120,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
               <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="userControllers.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/userControllers.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1377">
-              <caret line="81" column="29" selection-start-line="81" selection-start-column="29" selection-end-line="81" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -401,6 +402,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fathomless-woodland-42549" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fathomless-woodland-42549" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -583,12 +602,12 @@
       <workItem from="1476167081022" duration="749000" />
       <workItem from="1476357594746" duration="39000" />
       <workItem from="1476360135114" duration="13494000" />
-      <workItem from="1476728283405" duration="4962000" />
+      <workItem from="1476728283405" duration="5533000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="506557000" />
+    <option name="totallyTimeSpent" value="507128000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -609,7 +628,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17512275" sideWeight="0.4929312" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.47463176" sideWeight="0.4929312" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -652,9 +671,9 @@
           <caret line="32" column="35" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="54" />
           <folding>
             <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#form#0;n#div#2;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#div#2;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h6#0;n#div#0;n#div#0;n#form#0;n#div#2;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#form#0;n#div#2;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -731,9 +750,9 @@
           <caret line="32" column="35" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="54" />
           <folding>
             <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#form#0;n#div#2;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#div#2;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h6#0;n#div#0;n#div#0;n#form#0;n#div#2;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#form#0;n#div#2;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -810,9 +829,9 @@
           <caret line="32" column="35" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="54" />
           <folding>
             <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#form#0;n#div#2;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#div#2;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h6#0;n#div#0;n#div#0;n#form#0;n#div#2;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#form#0;n#div#2;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -910,14 +929,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/custom.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="63" selection-start-line="15" selection-start-column="63" selection-end-line="15" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/user/genLayout.ejs" />
     <entry file="file://$PROJECT_DIR$/views/genLayout.ejs" />
     <entry file="file://$PROJECT_DIR$/views/main/home.ejs">
@@ -1007,26 +1018,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/custom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="63" selection-start-line="15" selection-start-column="63" selection-end-line="15" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/views/main/product-main.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="72" column="32" selection-start-line="72" selection-start-column="32" selection-end-line="72" selection-end-column="113" />
+        <state relative-caret-position="113">
+          <caret line="66" column="86" selection-start-line="66" selection-start-column="86" selection-end-line="66" selection-end-column="86" />
           <folding>
             <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#form#0;n#div#2;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#div#2;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h6#0;n#div#0;n#div#0;n#form#0;n#div#2;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#form#0;n#div#2;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/main/category.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="174" column="91" selection-start-line="174" selection-start-column="91" selection-end-line="174" selection-end-column="91" />
+        <state relative-caret-position="187">
+          <caret line="177" column="52" selection-start-line="177" selection-start-column="52" selection-end-line="177" selection-end-column="52" />
           <folding>
             <element signature="e#4212#9713#0#HTML" expanded="false" />
             <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#2;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#div#2;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h6#0;n#div#0;n#div#0;n#form#0;n#div#2;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
