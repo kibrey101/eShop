@@ -2,7 +2,7 @@
 
 <div class="container">
     <div class="row">
-        <% if(user && products.length > 0) { %>
+        <% if(products.length > 0) { %>
         <div class="col s3" style="margin-top: 22px;">
             <div class="card" style="padding:0;">
                 <div class="card-title" style="padding: 10px 0 0 0;">
@@ -170,13 +170,13 @@
                         <h6 class="productCategory"><%= products[product].category.name %></h6>
                         <h6 class="productName"><%= products[product].name %></h6>
                     </div>
-                    <div class="card-action" style="padding: 6px;">
+                    <div class="card-action" style="padding: 6px 0 0 6px;">
                         <form action="/addToCart" method="post">
-                            <div class="row" style="margin: 20px 0 0 0;">
+                            <div class="row" style="margin: 10px 0 0 0; padding-bottom: 0;">
 
                                 <input type="hidden" name="product_id" id="product_id" value="<%= products[product]._id %>">
                                 <input type="hidden" name="priceHidden" id="priceHidden" value="<%= products[product].price %>">
-                                <% if(user){ %>
+
                                 <div class="col s2" style="padding: 0;">
                                     <input type="hidden" class="quantity" name="quantity" id="quantity" value="1">
                                     <input placeholder="Qty" type="text" class="validate s6 homeCartQuantity"
@@ -186,10 +186,6 @@
                                     <button type="submit" class="btn homeAddToCart"
                                             style="padding-left: 5px; padding-right: 5px;background-color: #eee;color:#000;">ADD TO CART</button>
                                 </div>
-
-                                <% } else { %>
-                                <a href="/login" class="btn btn-warning">Signin to make order</a>
-                                <% } %>
                             </div>
                         </form>
                     </div>

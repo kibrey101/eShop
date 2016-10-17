@@ -5,7 +5,7 @@
     <div class="nav-wrapper mainBar">
         <div class="container">
             <div class="row" style="margin-top: 20px;">
-                <div class="col s3" style="margin-top: 10px;">
+                <div class="col s12 m3" style="margin-top: 10px;">
                     <h4><a href="/" class="" style="color: #C39738;font-weight: bold; ">EastAfro Shop</a></h4>
                 </div>
                 <% if(user) { %>
@@ -53,13 +53,13 @@
                 </div>-->
                 <% } else { %>
                 <div class="row">
-                    <div class="col s3  offset-s3 right">
+                    <div class="col s12 m4 offset-m3 right">
                         <a href="/login" class="navbarLogin">Login</a><a href="/signup" class="navbarLogin" style="color: #00b0ff!important;">Or create account</a>
                     </div>
                 </div>
                 <% } %>
             </div>
-            <% if(user){ %>
+
             <div class="nav-wrapper">
                     <div class="row">
                         <ul class="">
@@ -72,7 +72,7 @@
                         </ul>
                     </div>
             </div>
-            <% } %>
+
 
         </div>
 
