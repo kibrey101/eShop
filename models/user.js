@@ -17,7 +17,14 @@ var UserSchema = new Schema({
         lastName: {type: String, default: ""},
         picture: {type: String, default: ""}
     },
-    address: {type: String, default: ""},
+    address:
+    {
+        street: {type: String, default: ""},
+        city: {type: String, default: ""},
+        postalCode: {type:String, default: ""},
+        country: {type:String, default: ""},
+        phoneNumber: {type:String, default: ""}
+    },
     history: [{
         orderDate: {type: Date},
         orderStatus: {type: String},
